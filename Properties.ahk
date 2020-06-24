@@ -3,19 +3,6 @@
 ;Global Variables and Settings
 ;~~~~~~~~~~~~~~~~~~~~~
 
-;emails
-getPersonalEmail()
-{
-;msgbox 'getGamingComputerName method'
-return "mlandryviolin@gmail.com"
-}
-
-getWorkEmail()
-{
-return "miclandry@deloitte.com"
-}
-
-
 ;computer names
 
 getGamingComputerName()
@@ -30,25 +17,53 @@ getWorkComputerName()
   return  "USMECMICLANDRY2"
 }
 
-;passwords
 
-getPersonalPassword()
+
+;emails
+getPersonalEmail()
 {
-return "toomanyofthese"
+;msgbox 'getGamingComputerName method'
+return "mlandryviolin@gmail.com"
 }
 
-getPersonalPassword2()
+getWorkEmail()
 {
-return "stilltoomanyofthese"
+return "miclandry@deloitte.com"
 }
 
-getWorkPassword()
-{
-;return "agggh"
-return "makeitstop"
-}
+;usernames
 
 getWorkUsername()
 {
-return "miclandry"
+  return "miclandry"
 }
+
+getPersonalUsername()
+{
+  return "hamsterofdark"
+}
+
+
+
+;passwords
+
+getPersonalPasswordCharlie()
+{
+return "ppwdcharlie"
+}
+
+getPersonalPasswordVictor()
+{
+return "ppwdvictor"
+}
+
+getWorkPasswordCharlie()
+{
+return "wpwdcharlie"
+}
+
+getWorkPasswordVictor()
+{
+return "wpwdvictor"
+}
+

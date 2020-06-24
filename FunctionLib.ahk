@@ -1,6 +1,174 @@
-#include C:\Users\miclandry\source\autohotkeys-master\Program_selector.ahk
+
 #include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
 ;use below line to add functions to script
+
+
+
+;----------------------- Property stuff
+
+
+;--email
+sendPrimaryEmail()
+{
+    ;msgbox "sending primary email for this computer.
+    if (isWorkComputer())
+    {
+    ;msgbox this is work computer
+    var := getWorkEmail()
+    send %var%
+    }
+    else
+    {
+    ;msgbox this is personal computer
+    var := getPersonalEmail()
+    send %var%
+    }
+    return
+}
+
+
+sendSecondaryEmail()
+{
+    if (isWorkComputer())
+    {
+    var := getPersonalEmail()
+    send %var%
+    }
+    else
+    {
+    var := getWorkEmail()
+    send %var%
+    }
+    return
+}
+
+;--username
+
+sendPrimaryUsername()
+{
+    if (isWorkComputer())
+    {
+        var := getWorkUsername()
+        send %var%
+    }
+    else
+    {
+        var := getPersonalUsername()
+        send %var%
+    }
+
+    return
+}
+
+sendSecondaryUsername()
+{
+    if (isWorkComputer())
+    {
+        var := getPersonalUsername()
+        send %var%
+    }
+    else
+    {
+        var := getWorkUsername()
+        send %var%
+    }
+    return
+}
+
+
+
+
+; my password generations will live in the c and v buttons. using shift will change from work to home and vice versa
+
+sendPersonalPasswordCharlie()
+{
+    var := getPersonalPasswordCharlie()
+    send %var%
+}
+
+
+sendPersonalPasswordVictor()
+{
+    var := getPersonalPasswordVictor()
+    send %var%
+}
+
+sendWorkPasswordCharlie()
+{
+    var := getWorkPasswordCharlie()
+    send %var%
+}
+
+
+sendWorkPasswordVictor()
+{
+    var := getWorkPasswordVictor()
+    send %var%
+}
+
+
+
+
+
+
+
+sendDefaultPasswordCharlie()
+{
+    if (isWorkComputer())
+    {
+        sendWorkPasswordCharlie()
+    }
+    else
+    {
+        sendPersonalPasswordCharlie()
+    }  
+}
+
+sendAlternativePasswordCharlie()
+{
+    if (isWorkComputer())
+    {
+        sendPersonalPasswordCharlie()
+    }
+    else
+    {
+        sendWorkPasswordCharlie()
+    }  
+}
+
+
+sendDefaultPasswordVictor()
+{
+    if (isWorkComputer())
+    {
+        sendPersonalPasswordVictor()
+    }
+    else
+    {
+        sendPersonalPasswordVictor()
+    }  
+}
+
+sendAlternativePasswordVictor()
+{
+    if (isWorkComputer())
+    {
+        sendPersonalPasswordVictor()
+    }
+    else
+    {
+        sendWorkPasswordVictor()
+    }  
+}
+
+
+
+
+
+
+
+
+
 
 ; by the way, you cant use clipboard in functions, use a key remap instead
 sendYGrabber()
@@ -9,12 +177,6 @@ send docker ps
 
 }
 
-/*
-send grep -r 'map' *
-throw new ApplicationException("Context", e);
-
-
-*/
 
 
 sendLGrabber()
@@ -205,23 +367,7 @@ else
 return
 }
 
-/*
-openGoogleDrive()
-{
-SetTitleMatchMode 2
-IfWinExist My Drive
-{
-    WinActivate
-    WinMaximize
-}
-else
-{
-    run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe  --app=https://drive.google.com/drive/#my-drive
-return
-}
-return
-}
-*/
+
 openGoogleDrive()
 {
 bringUpApp("Google Drive", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe  --app=https://drive.google.com/drive/#my-drive")
@@ -277,27 +423,6 @@ return
 
 ;----------------------------------------------------------
 
-openDeltek()
-{
-SetTitleMatchMode 2
-IfWinExist - Deltek
-{
-    WinActivate
-    WinMaximize
-}
-else
-{
-    run C:\Program Files (x86)\Internet Explorer\iexplore.exe https://tne.orgstrategies.com/DeltekTC/welcome.msv
-;    WinWait - 
-;    WinActivate
-;    WinMaximize
-}
-
-return
-}
-
-
-
 
 
 openBugzilla()
@@ -318,123 +443,6 @@ else
 
 return
 }
-
-
-
-
-
-sendPrimaryUsername()
-{
-if (isWorkComputer())
-{
-    var := getWorkUsername()
-    send %var%
-}
-else
-{
-send hamsterofdark
-}
-return
-}
-
-sendSecondaryUsername()
-{
-if (isWorkComputer())
-{
-  send hamsterofdark
-}
-else
-{
-    var := getWorkUsername()
-    send %var%
-}
-return
-}
-
-
-
-
-
-
-
-;windows plus V
-sendDefaultPassword()
-{
-/*
-while I have the ability to fetch the literal from properties, I have it hard coded here for performance and glitch reasons
-If I decide to re orient so that personal and work dont align on c and v keys, then I will have to pull from properties
-*/
-if (isWorkComputer())
-{
-  send J@nus1.o.o
-; sendPersonalPassword()
-}
-else
-{
-  send Heimd@ll1.o
-}  
-}
-
-;windows plus c
-sendAlternativePassword()
-{
-if (isWorkComputer())
-{
-    send Heimd@ll1.o
-;    var := getWorkPassword()
-;    send %var%
-}
-else
-{
-;    var := getWorkPassword()
-;  send %var%
-send hamsterofdark
-}
-}
-
-sendDeveloperEmail()
-{
-send michaellandryjava@yahoo.com
-}
-
-
-sendPrimaryEmail()
-{
-;msgbox "sending primary email for this computer.
-if (isWorkComputer())
-{
-;msgbox this is work computer
-var := getWorkEmail()
-send %var%
-}
-else
-{
-;msgbox this is personal computer
-var := getPersonalEmail()
-send %var%
-}
-return
-}
-
-
-
-
-
-sendSecondaryEmail()
-{
-if (isWorkComputer())
-{
-var := getPersonalEmail()
-send %var%
-}
-else
-{
-var := getWorkEmail()
-send %var%
-}
-return
-}
-
 
 
 

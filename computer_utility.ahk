@@ -135,6 +135,16 @@ return
 #f:: Run "C:\Program Files (x86)\Anki\anki.exe"
 
 
+;************************ app switcher
++#a::
+{
+;msgbox, open app switcher
+ Run "computer-utility\AppSwitcher.ahk"
+ return
+}
+
+
+
 
 ;*********************************Auto Google
 SendMode Input 
@@ -169,71 +179,7 @@ return
 
 ;  ~~~~~~~~~~~BOTTOM ROW ~~~~~~~~~~~~~~~~~
 
-;*****emails
 
-#z::
-{
-sendPrimaryEmail()
-return
-}
-
-#+z::
-{
-sendSecondaryEmail()
-return
-}
-
-
-;ctrl alt win z 
-#^z::
-{
-sendDeveloperEmail()
-return
-}
-
-
-;*******Usernames
-
-#x::
-{
-sendPrimaryUsername()
-return
-
-}
-
-
-#!x::
-{
-sendSecondaryUsername()
-return
-}
-
-
-;********Passwords
-
-
-#v::
-{
-  sendDefaultPassword()
-  return
-}
-
-#+v::
-{
-  sendAlternativePassword()
-  return
-}
-
-
-#m:: 
-{
-openGoogleMusic()
-return
-}
-
-;******Phone Numbers
-
-#p::send 678-471-9563
 
 ;******** END STRING MACROS
 

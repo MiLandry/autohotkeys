@@ -1,5 +1,6 @@
 ﻿Menu, Tray, Icon, C:\Users\miclandry\source\autohotkeys-master\icons\pilot.ico
 
+
 #include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
 
 ;
@@ -17,7 +18,13 @@
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+;SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SetWorkingDir C:\Users\miclandry\source\autohotkeys-master\ 
+
+
+
+
+
 
 ;Edit context menu for pilot light
 #Persistent
@@ -112,6 +119,9 @@ toggle_script(var)
 
 
 
+;_____________Send F Keys
+
+
 
 #^!F4::
 Suspend, Toggle
@@ -138,13 +148,8 @@ return
 
 F12::
 ;run Development\developmentlauncherlaptop.ahk
-run Development\developmentlauncherlaptop.ahk
+run C:\Users\miclandry\source\autohotkeys-master\Development\developmentlauncherlaptop.ahk
 Return
-
-
-
-
-;_____________Send F Keys
 
 
 
@@ -161,3 +166,17 @@ SendInput, {F11}
 Suspend, Off
 Return
 #F12::F12
+
+;_____________Top row
+
+!+t::
+;MsgBox, sntahoei
+run gui.ahk
+return
+
+;_____________Middle row
+
+^!#d::
+;MsgBox, sntahoei
+run Debugger.ahk
+return

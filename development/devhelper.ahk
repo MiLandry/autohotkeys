@@ -1,4 +1,3 @@
-#include C:\Users\miclandry\source\autohotkeys-master\Global_Variables.ahk
 Menu, tray, Icon, C:\Users\miclandry\source\autohotkeys-master\icons\devhelper.ico
 
 

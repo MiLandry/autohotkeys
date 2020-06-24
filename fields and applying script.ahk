@@ -1,5 +1,5 @@
 
-
+; NODO, refactor into properties
 #a::send Michael
 #s::send Landry
 #d::send 510 Sterling Hill Dr
@@ -8,7 +8,6 @@
 #h::send 30046
 #p::send 678-471-9563
 
-#!s::send Sage 50 Technical Support 
 
 
 

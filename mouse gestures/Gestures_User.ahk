@@ -69,12 +69,6 @@ return
 }
 
 
-;program selector
-Gesture_U_R_D:
-{
-openProgramSelector()
-return
-}
 
 ; Make 'M' for email
 Gesture_U_R_D_U_R_D:
