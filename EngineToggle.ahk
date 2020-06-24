@@ -1,0 +1,50 @@
+/*
+This script is wired to the f10 button when Pilot light is running
+Its job is to toggle the F10 script on and off
+
+The F10 script itself is responsible for toggling its buddies:
+  Mouse Gestures
+  Middle Mouse button Helper
+
+
+*/
+
+
+
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+
+
+
+
+
+;MAIN
+
+;msgbox f10launcher fired
+
+var = C:\Users\miclandry\source\autohotkeys-master\DesktopShortcuts.ahk
+toggle_script(var)
+
+
+var = C:\Users\miclandry\source\autohotkeys-master\mouse gestures\Gestures.ahk
+toggle_script(var)
+
+
+toggle_script(script)
+{
+DetectHiddenWindows, On
+IfWinExist, %script%
+    {
+
+    WinClose, %script%
+;    MsgBox "Closing %script%"
+    }
+else
+{
+    run %script%
+;    MsgBox "Opening %script%"
+}
+Return
+}

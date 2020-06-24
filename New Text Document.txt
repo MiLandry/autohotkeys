@@ -1,0 +1,10 @@
+
+;Copy Text
+CopyText()
+{
+    MsgBox Function
+    Send i
+}
+
+CopyText()
+
