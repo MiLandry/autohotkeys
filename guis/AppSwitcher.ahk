@@ -2,6 +2,8 @@
 ;#include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
 #include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
 
+
+
 ; Gui Layout
 ;---------------
 ;---------------
@@ -9,9 +11,14 @@
 Gui, Font, cWhite
 
 
-Gui, Add, Text, x10 y10, Hello
+Gui, Add, Text, x10 y10, Admin
+Gui, Add, Button, x150 y20 w200 h30 gTrello, Trello
+Gui, Add, Button, x150 y+30 w200 h30 gMail, Mail
 
-Gui, Add, Button, x150 y150 w200 h30 gOur_First_Button, LoadTrello
+Gui, Add, Text, x10 y+30, Tools
+Gui, Add, Button, x150 y+30 w200 h30 gPowerShell, PowerShell
+; Gui, Add, Button, x150 y+30 w200 h30 gMail, Mail
+
 
 
 Gui, +AlwaysOnTop
@@ -19,20 +26,29 @@ Gui, Color, Black
 Gui, Show,x1300 y50 w500 h500, App selector
 return
 
+GuiClose:
+  ExitApp
+  return
 
 ; Labels
 ;---------------
 ;---------------
 
-GuiClose:
+
+Trello:
+  ActivateChromeTab("Trello")
   ExitApp
   return
 
-Our_First_Button:
-  ActivateChromeTab("Trello")
+Mail:
+  openOutlook()
+  ExitApp
   return
 
-
+PowerShell:
+  Run %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
+  ExitApp
+  return
 
 
 
@@ -41,11 +57,7 @@ Our_First_Button:
 ;---------------
 onButtonClick()
 {
-	MsgBox, "trying to load trello"
-	settitlematchmode 2
-    winactivate, Google Chrome
-	ExitApp
-
+  return
 }
 
 

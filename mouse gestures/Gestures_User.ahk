@@ -1,5 +1,5 @@
 #include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
-
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Gestures:
 /*
  * Gestures
@@ -49,6 +49,13 @@ Gesture_U:
 {
 send #e	
 return
+}
+
+;open interface menu
+Gesture_U_D:
+{
+    run ..\guis\AppSwitcher.ahk
+    return
 }
 
 
