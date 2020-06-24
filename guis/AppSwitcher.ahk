@@ -1,4 +1,6 @@
 #SingleInstance, force
+;#include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
+#include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
 
 ; Gui Layout
 ;---------------

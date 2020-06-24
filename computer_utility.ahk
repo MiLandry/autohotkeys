@@ -139,7 +139,7 @@ return
 +#a::
 {
 ;msgbox, open app switcher
- Run "computer-utility\AppSwitcher.ahk"
+ Run ..\guis\AppSwitcher.ahk
  return
 }
 
