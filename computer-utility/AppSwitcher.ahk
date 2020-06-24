@@ -47,40 +47,4 @@ onButtonClick()
 }
 
 
-; Activates tab in Google Chrome if it exists
-; Returns true if exists, false if does not exist
-; Leaves original tab activated if sought tab does not exist
-; Known issue: will stop searching tabs if two tabs have same name
-ActivateChromeTab(soughtTab)
-{
-  SetTitleMatchMode 2 ; Allows for partial matches in window titles
-
-  IfWinNotExist Google Chrome
-  {
-    return false
-  }
-
-  WinActivate Google Chrome
-  WinWaitActive Google Chrome
-  WinGetTitle, currentTab, A
-  firstTab := currentTab
-
-  if (InStr(currentTab, soughtTab) > 0)
-  {
-    return true
-  }
-
-  Loop
-  {
-    Send {CtrlDown}{Tab}{CtrlUp}
-    Sleep 50 ; Requires some time to update the window titles
-    WinGetTitle, currentTab, A
-    foundTab := InStr(currentTab, soughtTab) > 0
-  }
-  Until (foundTab || currentTab == firstTab)
-
-  return foundTab
-}
-
-
 ^x::ExitApp

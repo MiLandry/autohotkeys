@@ -22,7 +22,7 @@ return
 purpose:
 	this script is responsible for calling other scripts that customize the comupter
 	this script is also a wrapper around computer utility
-
+wpwdcharlieppwdvictor
 scripts included here:
   computer utility
 
