@@ -1,5 +1,5 @@
-SetWorkingDir, C:\Users\miclandry\source\autohotkeys-master
-#include Properties.ahk
+SetWorkingDir, %A_ScriptDir%
+#include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
 
 
 

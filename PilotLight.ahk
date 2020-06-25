@@ -123,6 +123,8 @@ cycleKeyboards()
 return
 
 F10::
+run MouseGestures\Gestures.ahk
+run Development\devhelper.ahk
 run Container\Container.ahk
 Return
 

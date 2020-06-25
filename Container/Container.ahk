@@ -3,9 +3,8 @@ Menu, Tray, Icon, icons\container.ico
 
 ;#Include %A_ScriptDir%
 
-;run runs the script as a separate script, incclude just adds that code to this script
-run  MouseGestures\Gestures.ahk
-run Development\devhelper.ahk
+
+
 
 #Persistent  ; Keep the script running until the user exits it.
 ;Menu, tray, add  ; Creates a separator line.
