@@ -1,6 +1,4 @@
-
 #include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
-;use below line to add functions to script
 
 
 
@@ -107,11 +105,6 @@ sendWorkPasswordVictor()
 }
 
 
-
-
-
-
-
 sendDefaultPasswordCharlie()
 {
     if (isWorkComputer())
@@ -165,9 +158,11 @@ sendAlternativePasswordVictor()
 
 
 
+; End of property stuff
 
 
 
+;------------------random stuff TODO: refactor
 
 
 ; by the way, you cant use clipboard in functions, use a key remap instead
@@ -177,15 +172,13 @@ send docker ps
 
 }
 
-
-
 sendLGrabber()
 {
 send docker kill 
 return
 }
 
-
+;------------------Helpers
 
 bringUpApp( appName, appLocation)
 {
@@ -288,23 +281,23 @@ else
 return
 }
 
-openOutlook()
-{
-SetTitleMatchMode 2
-IfWinExist - Outlook
-{
-    WinActivate
-    WinMaximize
-}
-else
-{
-    run D:\Program Files\Microsoft Office\Office15\OUTLOOK.EXE
-    WinWait - Outlook
-    WinActivate
-    WinMaximize
-}
-return
-}
+; openOutlook()
+; {
+; SetTitleMatchMode 2
+; IfWinExist - Outlook
+; {
+;     WinActivate
+;     WinMaximize
+; }
+; else
+; {
+;     run D:\Program Files\Microsoft Office\Office15\OUTLOOK.EXE
+;     WinWait - Outlook
+;     WinActivate
+;     WinMaximize
+; }
+; return
+; }
 
 
 openEmail()
@@ -332,7 +325,6 @@ openGmail()
 }
 else
 {
-;openOutlook()
 openWorkEmail()
 }
 return

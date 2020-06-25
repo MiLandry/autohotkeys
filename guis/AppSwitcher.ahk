@@ -55,13 +55,13 @@ Trello:
   return
 
 Mail:
-  openOutlook()
+  openWorkEmail()
+  Send ^1
   ExitApp
   return
 
 Calendar:
-  openOutlook()
-  ; Send ^{2} 
+  openWorkEmail()
   Send ^2
   ExitApp
   return
