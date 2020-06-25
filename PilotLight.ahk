@@ -34,35 +34,6 @@ Menu, tray, add  ; Creates a separator line.
 return
 
 
-; MenuHandler:
-; {
-
-; ;TODO use path and string concatination
-
-; Run, C:\Program Files\Sublime Text 3\sublime_text.exe "listofscripts.txt"
-; return
-; }
-
-; MenuHandler1:
-; {
-; Run, C:\Program Files\Sublime Text 3\sublime_text.exe "C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk"
-; return
-; }
-
-; MenuHandler2:
-; {
-; Run, C:\Program Files\Sublime Text 3\sublime_text.exe "C:\Users\miclandry\source\autohotkeys-master\Properties.ahk"
-; return
-; }
-
-; MenuHandler3:
-; {
-; Run, edit "C:\Users\miclandry\source\autohotkeys-master\Program_Selector.ahk"
-; return
-; }
-
-
-
 
 close_script(script)
 {
@@ -80,7 +51,7 @@ IfWinExist, %myscript%
 
 closeallscripts()
 {
-Loop, read, C:\Users\miclandry\source\autohotkeys-master\listofscripts.txt
+Loop, read, listofscripts.txt
 {
 
 var =  %A_LoopReadLine%
@@ -89,18 +60,6 @@ close_script(var)
 }
 
 
-
-
-
-toggleallscripts()
-{
-;    Loop, read, C:\Users\miclandry\source\autohotkeys-master\listofscripts.txt
-{
-var =  %A_LoopReadLine%
-
-toggle_script(var)
-}
-}
 
 
 
@@ -134,8 +93,8 @@ toggle_script(var)
 return
 
 F12::
-;run Development\developmentlauncherlaptop.ahk
-run C:\Users\miclandry\source\autohotkeys-master\Development\developmentlauncherlaptop.ahk
+
+run Development\developmentlauncherlaptop.ahk
 Return
 
 

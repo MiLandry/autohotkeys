@@ -1,27 +1,27 @@
-C:\Users\miclandry\source\autohotkeys-master\MouseGestures\Gestures.ahk
-C:\Users\miclandry\source\autohotkeys-master\320\320mph.ahk
-C:\Users\miclandry\source\autohotkeys-master\Development\Dev_Configurations.ahk
-C:\Users\miclandry\source\autohotkeys-master\Development\programmer_dvorak_layout.ahk
-C:\Users\miclandry\source\autohotkeys-master\Development\Web_app_Development.ahk
-C:\Users\miclandry\source\autohotkeys-master\Development\MarkupScript.ahkn
-C:\Users\miclandry\source\autohotkeys-master\keyboard\Dvorak.ahk
-C:\Users\miclandry\source\autohotkeys-master\Keyboard\Dvorak.ahk
+MouseGestures\Gestures.ahk
+320\320mph.ahk
+Development\Dev_Configurations.ahk
+Development\programmer_dvorak_layout.ahk
+Development\Web_app_Development.ahk
+Development\MarkupScript.ahk
+keyboard\Dvorak.ahk
+Keyboard\Dvorak.ahk
 
-C:\Users\miclandry\source\autohotkeys-master\Home Computer\DesktopShortcutsHomeComputer.ahk
-C:\Users\miclandry\source\autohotkeys-master\keyboard\fields and applying script.ahk
-C:\Users\miclandry\source\autohotkeys-master\Development\devhelper.ahk
+Home Computer\DesktopShortcutsHomeComputer.ahk
+keyboard\fields and applying script.ahk
+Development\devhelper.ahk
 
 
-C:\Users\miclandry\source\autohotkeys-master\development\programmer_dvorak_layout.ahk
-C:\Users\miclandry\source\autohotkeys-master\development\Web_app_Development.ahk
+development\programmer_dvorak_layout.ahk
+development\Web_app_Development.ahk
 
-C:\Users\miclandry\source\autohotkeys-master\keyboard\RH.ahk
-C:\Users\miclandry\source\autohotkeys-master\Laptop Computer\DesktopShortcutsLaptopComputer.ahk
-C:\Users\miclandry\source\autohotkeys-master\fields and applying script.ahk
-C:\Users\miclandry\source\autohotkeys-master\development\devhelper.ahk
-C:\Users\miclandry\source\autohotkeys-master\development\snippets.ahk
-C:\Users\miclandry\source\autohotkeys-master\Middle_Mouse_Button_In_Win_Explorer.ahk
+keyboard\RH.ahk
+Laptop Computer\DesktopShortcutsLaptopComputer.ahk
+fields and applying script.ahk
+development\devhelper.ahk
+development\snippets.ahk
+Middle_Mouse_Button_In_Win_Explorer.ahk
 
-C:\Users\miclandry\source\autohotkeys-master\engine\engine.ahk
-C:\Users\miclandry\source\autohotkeys-master\Container\Container.ahk
+engine\engine.ahk
+Container\Container.ahk
 

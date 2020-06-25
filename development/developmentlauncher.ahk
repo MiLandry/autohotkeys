@@ -29,11 +29,11 @@ Return
 
 
 ;main
-ProgrammingKeyboard = C:\Users\miclandry\source\autohotkeys-master\Development\programmer_dvorak_layout.ahk
+ProgrammingKeyboard = Development\programmer_dvorak_layout.ahk
 toggle_script(ProgrammingKeyboard)
 Sleep, 30
 
-var = C:\Users\miclandry\source\autohotkeys-master\Development\devhelper.ahk
+var = Development\devhelper.ahk
 toggle_script(var)
 
 
