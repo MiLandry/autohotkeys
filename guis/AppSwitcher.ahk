@@ -1,6 +1,10 @@
 #SingleInstance, force
+#NoEnv
+SetBatchLines -1
 ;#include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
 #include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
+#Include Guis\ButtonPlugin\Class_ImageButton.ahk
+SetTitleMatchMode 2
 
 
 
@@ -18,7 +22,7 @@ Gui, Add, Button, x150 y+30 w200 h30 gCalendar, Calendar
 
 Gui, Add, Text, x10 y+30, Tools
 Gui, Add, Button, x150 y+30 w200 h30 gPowerShell, PowerShell
-; Gui, Add, Button, x150 y+30 w200 h30 gMail, Mail
+Gui, Add, Button, x150 y+30 w200 h30 gVSCode, VSCode
 
 
 
@@ -58,7 +62,10 @@ PowerShell:
   ExitApp
   return
 
-
+VSCode:
+  WinActivate, Visual Studio Code
+  ExitApp
+  return
 
 ; Functions
 ;---------------

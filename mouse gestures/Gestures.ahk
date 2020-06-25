@@ -51,7 +51,6 @@ m_TransTrail = 0        ; Make trail window transparent (recommended if DWM/Aero
 CoordMode, Mouse, Screen    ; Let mouse commands use absolute/screen co-ordinates.
 SendMode Input              ; Set recommended send-mode.
 SetTitleMatchMode, 2        ; Match anywhere in window title.
-SetWorkingDir %A_ScriptDir% ; Set working directory to script's directory for consistency.
 SetBatchLines, -1           ; May improve responsiveness. Shouldn't negatively affect other
                             ; apps as the script sleeps every %m_Interval% ms while active.
 

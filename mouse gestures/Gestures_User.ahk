@@ -1,5 +1,4 @@
 #include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Gestures:
 /*
  * Gestures
@@ -51,12 +50,6 @@ send #e
 return
 }
 
-;open interface menu
-Gesture_U_D:
-{
-    run ..\guis\AppSwitcher.ahk
-    return
-}
 
 
 ;open download folder
@@ -96,11 +89,11 @@ return
 
 ; Down Right: Close active window - inherited from gestures default
 
-; Down:     launch one note
+;open interface menu
 Gesture_D:
 {
-openOneNote()
-return
+    run guis\AppSwitcher.ahk
+    return
 }
 
 ; down left: close a browser tab

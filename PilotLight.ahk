@@ -1,7 +1,9 @@
-﻿Menu, Tray, Icon, C:\Users\miclandry\source\autohotkeys-master\icons\pilot.ico
+﻿SetWorkingDir C:\Users\miclandry\source\autohotkeys-master
+
+Menu, Tray, Icon, icons\pilot.ico
 
 
-#include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
+#include FunctionLib.ahk
 
 ;
 ; AutoHotkey Version: 1.x
@@ -18,12 +20,6 @@
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-;SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-SetWorkingDir C:\Users\miclandry\source\autohotkeys-master\ 
-
-
-
-
 
 
 ;Edit context menu for pilot light
@@ -36,11 +32,6 @@ Menu, tray, add, edit Program_Selector, MenuHandler3
   
 return
 
-;callbacks for the context menu
-
-
-; constants
-AhkRepoPath := "C:\Users\Mike\source\autohotkeys\"
 
 MenuHandler:
 {
