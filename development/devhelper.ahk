@@ -1,4 +1,4 @@
-Menu, tray, Icon, C:\Users\miclandry\source\autohotkeys-master\icons\devhelper.ico
+Menu, tray, Icon, icons\devhelper.ico
 
 
 #Persistent 
@@ -173,22 +173,22 @@ return
 
 MenuHandler1:
 {
-Run, Notepad.exe "C:\Users\miclandry\source\autohotkeys-master\development\encase.ahk"
+Run, Notepad.exe "development\encase.ahk"
 return
 }
 
 MenuHandler2:
 {
-Run, Notepad.exe "C:\Users\miclandry\source\autohotkeys-master\development\programmer loader.ahk"
+Run, Notepad.exe "development\programmer loader.ahk"
 return
 }
 
 MenuHandler3:
-Run, Notepad.exe "C:\Users\miclandry\source\autohotkeys-master\development\snippets.ahk"
+Run, Notepad.exe "development\snippets.ahk"
 return
 
-#Include C:\Users\miclandry\source\autohotkeys-master\Development\encase.ahk
-#Include C:\Users\miclandry\source\autohotkeys-master\Development\snippets.ahk
+#Include Development\encase.ahk
+#Include Development\snippets.ahk
 
 ;alt dev stuff
 

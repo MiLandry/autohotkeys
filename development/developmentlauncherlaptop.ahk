@@ -28,7 +28,7 @@ Return
 }
 
 
-ProgrammingKeyboard = C:\Users\miclandry\source\autohotkeys-master\Development\programmer_dvorak_layout.ahk
+ProgrammingKeyboard = Development\programmer_dvorak_layout.ahk
 toggle_script(ProgrammingKeyboard)
 Sleep, 30
 
