@@ -1,5 +1,4 @@
-SetWorkingDir, %A_ScriptDir%
-#include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
+#include Properties.ahk
 
 
 
@@ -520,20 +519,20 @@ Return
 cycleKeyboards()
 {
 DetectHiddenWindows, On
-IfWinExist C:\Users\miclandry\source\autohotkeys-master\keyboard\Dvorak.ahk
-;IfWinExist C:\Users\miclandry\source\autohotkeys-master\keyboard\RH.ahk
+IfWinExist keyboard\Dvorak.ahk
+
 {
 ;msgbox '1'
-    WinClose, C:\Users\miclandry\source\autohotkeys-master\keyboard\Dvorak.ahk
-    run C:\Users\miclandry\source\autohotkeys-master\keyboard\RH.ahk
-} Else IfWinExist C:\Users\miclandry\source\autohotkeys-master\keyboard\RH.ahk
+    WinClose, keyboard\Dvorak.ahk
+    run keyboard\RH.ahk
+} Else IfWinExist keyboard\RH.ahk
 {
 ;msgbox '2'
-    WinClose, C:\Users\miclandry\source\autohotkeys-master\keyboard\RH.ahk
+    WinClose, keyboard\RH.ahk
 } Else
     {
 ;    msgbox '3'
-        run C:\Users\miclandry\source\autohotkeys-master\keyboard\Dvorak.ahk
+        run keyboard\Dvorak.ahk
     }
 return
 }

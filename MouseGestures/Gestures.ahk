@@ -207,10 +207,10 @@ return
  * Scripted gestures
  */
  
-#Include %A_ScriptDir%              ; Set working directory for #Include.
-;#Include C:\Users\miclandry\source\autohotkeys-master
-#Include *i Gestures_User.ahk       ; User-defined gestures, etc.
-#Include *i Gestures_Default.ahk    ; Default gestures.
+
+
+#Include MouseGestures\Gestures_User.ahk       ; User-defined gestures, etc.
+#Include MouseGestures\Gestures_Default.ahk    ; Default gestures.
 
 
 /*

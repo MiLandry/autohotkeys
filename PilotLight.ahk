@@ -1,4 +1,4 @@
-﻿SetWorkingDir, C:\Users\miclandry\source\autohotkeys-master
+﻿;SetWorkingDir, C:\Users\miclandry\source\autohotkeys-master
 ;#Include %A_ScriptDir%
 
 Menu, Tray, Icon, icons\pilot.ico
