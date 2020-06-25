@@ -1,6 +1,6 @@
 
 
-Menu, Tray, Icon, C:\Users\miclandry\source\autohotkeys-master\icons\keyboard.ico
+Menu, Tray, Icon, icons\keyboard.ico
 
 
 

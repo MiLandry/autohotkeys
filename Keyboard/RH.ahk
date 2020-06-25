@@ -1,4 +1,4 @@
-Menu, Tray, Icon, C:\Users\miclandry\source\autohotkeys-master\icons\hand.ico
+Menu, Tray, Icon, icons\hand.ico
 
 
 ; ^^^^^^^^^^ CTL

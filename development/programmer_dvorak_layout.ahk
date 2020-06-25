@@ -1,5 +1,5 @@
 
-Menu, Tray, Icon, C:\Users\miclandry\source\autohotkeys-master\icons\matrix.ico
+Menu, Tray, Icon, icons\matrix.ico
 
 ;****** Initialization
 

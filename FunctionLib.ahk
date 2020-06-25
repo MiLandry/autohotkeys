@@ -281,24 +281,6 @@ else
 return
 }
 
-; openOutlook()
-; {
-; SetTitleMatchMode 2
-; IfWinExist - Outlook
-; {
-;     WinActivate
-;     WinMaximize
-; }
-; else
-; {
-;     run D:\Program Files\Microsoft Office\Office15\OUTLOOK.EXE
-;     WinWait - Outlook
-;     WinActivate
-;     WinMaximize
-; }
-; return
-; }
-
 
 openEmail()
 {

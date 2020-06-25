@@ -31,8 +31,8 @@ m_GesturePrefix = Gesture   ; Default prefix for gesture variables/labels.
 m_KeylessPrefix =           ; Prefix for keyless gestures, or blank to disable.
 m_Delimiter = _
 
-m_EnabledIcon = C:\Users\miclandry\source\autohotkeys-master\icons\gestures.ico
-m_DisabledIcon = C:\Users\miclandry\source\autohotkeys-master\icons\nogestures.ico
+m_EnabledIcon = icons\gestures.ico
+m_DisabledIcon = icons\nogestures.ico
 m_EnabledSound = %A_ScriptDir%\wurt_enabled.wav
 m_DisabledSound = %A_ScriptDir%\wurt_disabled.wav
 

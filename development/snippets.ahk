@@ -1,4 +1,4 @@
-#include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
+#include FunctionLib.ahk
 
 
 

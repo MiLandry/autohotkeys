@@ -1,8 +1,7 @@
 #SingleInstance, force
 #NoEnv
 SetBatchLines -1
-;#include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
-#include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
+#include FunctionLib.ahk
 #Include Guis\ButtonPlugin\Class_ImageButton.ahk
 SetTitleMatchMode 2
 
@@ -80,7 +79,8 @@ Calendar:
   return
 
 PowerShell:
-  Run %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe
+  ;bringUpApp("powershell", "C:\Users\miclandry\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell")
+  Run C:\Users\miclandry\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell
   ExitApp
   return
 
