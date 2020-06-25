@@ -1,4 +1,5 @@
-﻿SetWorkingDir C:\Users\miclandry\source\autohotkeys-master
+﻿SetWorkingDir, C:\Users\miclandry\source\autohotkeys-master
+;#Include %A_ScriptDir%
 
 Menu, Tray, Icon, icons\pilot.ico
 
@@ -25,47 +26,40 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 ;Edit context menu for pilot light
 #Persistent
 Menu, tray, add  ; Creates a separator line.
-Menu, tray, add, edit listofscripts, MenuHandler  
-Menu, tray, add, edit Functions, MenuHandler1  
-Menu, tray, add, edit Properties, MenuHandler2  
-Menu, tray, add, edit Program_Selector, MenuHandler3
+; Menu, tray, add, edit listofscripts, MenuHandler  
+; Menu, tray, add, edit Functions, MenuHandler1  
+; Menu, tray, add, edit Properties, MenuHandler2  
+; Menu, tray, add, edit Program_Selector, MenuHandler3
   
 return
 
 
-MenuHandler:
-{
-    ;TODO try something like this logic to not use hardcoded path for editor
-;FileRead, Mytext, Textfile.txt ; Textfile.txt should be the text file you wish to open.
-;WinWait, Untitled - Notepad ; Waits until window is avalible
-;WinActivate, Untitled - Notepad ; Activates the window.
-;Send, %Mytext% ; Sends your textfile to notepad
-;ExitApp ; Exits the application
+; MenuHandler:
+; {
 
+; ;TODO use path and string concatination
 
-;TODO use path and string concatination
-;Run, C:\Program Files\Sublime Text 3\sublime_text.exe "C:\Users\miclandry\source\autohotkeys-master\listofscripts.txt"
-Run, C:\Program Files\Sublime Text 3\sublime_text.exe "C:\Users\miclandry\source\autohotkeys-master\listofscripts.txt"
-return
-}
+; Run, C:\Program Files\Sublime Text 3\sublime_text.exe "listofscripts.txt"
+; return
+; }
 
-MenuHandler1:
-{
-Run, C:\Program Files\Sublime Text 3\sublime_text.exe "C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk"
-return
-}
+; MenuHandler1:
+; {
+; Run, C:\Program Files\Sublime Text 3\sublime_text.exe "C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk"
+; return
+; }
 
-MenuHandler2:
-{
-Run, C:\Program Files\Sublime Text 3\sublime_text.exe "C:\Users\miclandry\source\autohotkeys-master\Properties.ahk"
-return
-}
+; MenuHandler2:
+; {
+; Run, C:\Program Files\Sublime Text 3\sublime_text.exe "C:\Users\miclandry\source\autohotkeys-master\Properties.ahk"
+; return
+; }
 
-MenuHandler3:
-{
-Run, edit "C:\Users\miclandry\source\autohotkeys-master\Program_Selector.ahk"
-return
-}
+; MenuHandler3:
+; {
+; Run, edit "C:\Users\miclandry\source\autohotkeys-master\Program_Selector.ahk"
+; return
+; }
 
 
 
@@ -129,7 +123,7 @@ cycleKeyboards()
 return
 
 F10::
-run C:\Users\miclandry\source\autohotkeys-master\engine\engine.ahk
+run Container\Container.ahk
 Return
 
 F11::

@@ -12,7 +12,7 @@ return
 
 
 MenuHandler1:
-Run, Notepad.exe "C:\Users\miclandry\source\autohotkeys-master\static\computer_utility.ahk"
+Run, Notepad.exe "computer_utility.ahk"
 return
 
 
@@ -65,7 +65,7 @@ return
 ;_________________________________IMPORT COMMON UTILITIES__________________________________________
 
 
-#Include C:\Users\miclandry\source\autohotkeys-master\static\computer_utility.ahk
+#Include computer_utility.ahk
 
 
 ;_________________________________BEGIN HOMECOMPUTER SCRIPT__________________________________________
@@ -73,21 +73,6 @@ return
 ;_________________________'Function' Keys _________________________________
 
 
-#f8:: 
-SetTitleMatchMode 2
-IfWinExist - Gmail
-{
-    WinActivate
-    WinMaximize
-}
-else
-{
-    run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe --app=https://mail.google.com/mail;Application Launcher 2.0
-    WinWait - Gmail
-    WinActivate
-    WinMaximize
-}
-return
 ;_________________________________________________KEYBOARD REMAPPING_________________________________________________
 
 ;  ~~~~~~~~~~~TOP ROW ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,67 +82,12 @@ return
 
 
 
-#e::
-IfWinExist Google Chrome
-{
-    WinActivate
-    MsgBox 'google chrome winactivated'
-    WinMaximize
-}
-else
-{
-    Run "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-    WinWait Google Chrome
-    MsgBox 'Chrome launched'
-    WinActivate
-    WinMaximize
-}
-Return
-
-
-
-
-#!r:: 
-SetTitleMatchMode 2
-IfWinExist OneNote
-{
-    WinActivate
-}
-else
-{
-    run C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office 2013\OneNote 2013
-    WinWait OneNote
-    WinActivate
-}
-Return
-
-;Tasks
-
-#t:: run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe  --app=https://mail.google.com/tasks/canvas?pli=1
-
-; open Calendar
-#!t:: run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe  --app=https://www.google.com/calendar/render?tab=wc
-
 
 ;  ~~~~~~~~~~~MIDDLE ROW ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +Capslock:: Return
 ;Capslock:: {ackspace}
 
-#a::
-IfWinExist Dropbox
-{
-    WinActivate
-}
-
-
-else
-{
-    run C:\Dropbox
-    WinWait Dropbox
-    WinActivate
-}
-Return
 
 
 #s:: run C:\
@@ -168,11 +98,6 @@ Return
 ;  ~~~~~~~~~~~BOTTOM ROW ~~~~~~~~~~~~~~~~~
 
 
-
-
-
-#!d:: run "C:\Computer Data\REAL Documents"
-#m:: run "C:\Program Files (x86)\iTunes\iTunes.exe"
 
 
 #IfWinActive ahk_class ConsoleWindowClass

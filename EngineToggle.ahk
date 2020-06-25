@@ -24,11 +24,11 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 
 ;msgbox f10launcher fired
 
-var = C:\Users\miclandry\source\autohotkeys-master\DesktopShortcuts.ahk
+var = DesktopShortcuts.ahk
 toggle_script(var)
 
 
-var = C:\Users\miclandry\source\autohotkeys-master\mouse gestures\Gestures.ahk
+var = mouse gestures\Gestures.ahk
 toggle_script(var)
 
 

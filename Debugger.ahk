@@ -1,7 +1,6 @@
 #SingleInstance, force
-; #include C:\Users\miclandry\source\autohotkeys-master\Program_selector.ahk
-#include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
-#include C:\Users\miclandry\source\autohotkeys-master\FunctionLib.ahk
+#include Properties.ahk
+#include FunctionLib.ahk
 
 
 ; Gui Layout

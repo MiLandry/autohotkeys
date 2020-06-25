@@ -1,4 +1,5 @@
-#include C:\Users\miclandry\source\autohotkeys-master\Properties.ahk
+SetWorkingDir, C:\Users\miclandry\source\autohotkeys-master
+#include Properties.ahk
 
 
 
