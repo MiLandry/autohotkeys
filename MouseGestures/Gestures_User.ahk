@@ -11,8 +11,8 @@ Gestures:
 ;---------------------Mouse wheel--------------
 
 ; Wheel        Switch between tabs.
-Gesture_WheelUp = ^+{Tab}
-Gesture_WheelDown = ^{Tab}
+;Gesture_WheelUp = ^+{Tab}
+;Gesture_WheelDown = ^{Tab}
 
 
 return ; have to return the script to this point as these stubs 
@@ -20,26 +20,6 @@ return ; have to return the script to this point as these stubs
 
 
 
-;Make 'S' for save
-Gesture_L_D_R_D_L:
-{
-
-
- 
-
-
-
-;cp
-;send 31786
-
-;wp
-;send 29673
-
-;hp fortify
-send 34108
-
-return
-}
 ;--------------------- The  "UP" library-------------------
 
 
@@ -132,20 +112,18 @@ Gesture_D_U_D:
 ; Left, Down, Left: Snap window to the left
 Gesture_L_D_L:
 {
-send #{Left}
-return
-}
-
-; Left, Up:     Go up one level in explorer.
-Gesture_L_U = !{Up}
-
-
-;left, down, left, down left,   backspace
-Gesture_L_D_L_D_L:
-{
-    send {DEL}
+    send #{Left}
     return
 }
+
+;move interface to other monitor
+Gesture_L_U:
+{
+    send #+{Left}
+    return
+}
+
+
 ;---------------------THe "RIGHT" library-----------
 
 
@@ -163,20 +141,18 @@ send #{Right}
 return
 }
 
+; right monitor
+Gesture_R_U:
+{
+    send #+{Right}
+    return
+}
 
 ;---------------------------The "Draw letters" libary------------------------
 
-;Draw an 'e' open Internet Explorer
-Gesture_R_U_L_D_R:
-{
-openInternetExplorer()
-return
-}
 
 
 ;---------------------------Email------------------------
-
-
 
 
 
@@ -194,8 +170,6 @@ return
 
 
 ;---------------------alt tab---------------
-
-
 
 
 

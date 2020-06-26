@@ -500,23 +500,42 @@ Return
 
 cycleKeyboards()
 {
-DetectHiddenWindows, On
-IfWinExist keyboard\Dvorak.ahk
+    If WinExist("PilotLight.ahk" . " ahk_class AutoHotkey")
+      msgbox, ASDF;ASLDKFJA;S
+      
+    ; msgbox, in cycleKeyboards
+    DetectHiddenWindows, On
+    settitlematchmode 2
 
-{
-;msgbox '1'
-    WinClose, keyboard\Dvorak.ahk
-    run keyboard\RH.ahk
-} Else IfWinExist keyboard\RH.ahk
-{
-;msgbox '2'
-    WinClose, keyboard\RH.ahk
-} Else
+    IfWinExist, Dvorak.ahk
     {
-;    msgbox '3'
-        run keyboard\Dvorak.ahk
+        ; msgbox, 1
+        WinClose, Keyboard\Dvorak.ahk
+        run keyboard\Developer.ahk
+        return
     }
-return
+
+    IfWinExist, Developer.ahk
+    {
+        ; msgbox, 2
+        WinClose, Keyboard\Developer.ahk
+        run Keyboard\Qwerty.ahk
+        return
+    }
+
+
+    IfWinExist, Qwerty.ahk
+    {
+        ; msgbox, 3
+        WinClose, Keyboard\Qwerty.ahk
+        run Keyboard\Dvorak.ahk
+        return
+    }
+
+    ; msgbox, default
+
+    run Keyboard\Dvorak.ahk
+    return
 }
 
 

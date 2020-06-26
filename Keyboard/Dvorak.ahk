@@ -2,6 +2,7 @@
 
 Menu, Tray, Icon, icons\keyboard.ico
 
+SoundPlay, Sounds\landry.mp3
 
 
 ; ^^^^^^^^^^ CTL

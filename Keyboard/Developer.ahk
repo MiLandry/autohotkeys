@@ -1,6 +1,6 @@
 
 Menu, Tray, Icon, icons\matrix.ico
-
+SoundPlay, Sounds\developer.mp3
 ;****** Initialization
 
 
