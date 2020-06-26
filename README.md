@@ -16,6 +16,13 @@ pilot light starts everything.
 engine script manages all 'quality of life stuff', ie...
 sending emails, un, pw,
 
+## Container
+  The container 'contains" all the scripts too small to justify running as a persistent script, cluttering the sysstem tray,
+  included in here is...
+  spitters
+  hotstring libraries
+  
+
 
 ## Debugging
 ctrl win alt and D to open debugger 

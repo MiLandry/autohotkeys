@@ -211,10 +211,6 @@ openWorkEmail()
 isWorkComputer()
 {
 var := getWorkComputerName()
-;msgbox work computer name is %var%
-;msgbox THIS computer name is %A_ComputerName%
-;msgbox does %A_ComputerName% equal %var% 
-;if ("%A_ComputerName%" == "%var%")
 if (A_ComputerName = var) {
 ;msgbox yes
 return true
@@ -223,6 +219,16 @@ return true
 return false
 }
 
+close_script(script)
+{
+    settitlematchmode 2
+    DetectHiddenWindows, On
+    myscript = %script% 
+    IfWinExist, %myscript%
+        {
+        WinClose, %myscript%
+        }
+}
 
 
 Copy()

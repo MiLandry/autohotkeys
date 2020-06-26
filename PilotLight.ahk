@@ -1,38 +1,11 @@
-﻿
-Menu, Tray, Icon, icons\pilot.ico
-
-
+﻿Menu, Tray, Icon, icons\pilot.ico
 #include FunctionLib.ahk
-
-
-
-
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-
-
-;Edit context menu for pilot light
 #Persistent
-Menu, tray, add  ; Creates a separator line.
-; Menu, tray, add, edit listofscripts, MenuHandler  
-; Menu, tray, add, edit Functions, MenuHandler1  
-; Menu, tray, add, edit Properties, MenuHandler2  
-; Menu, tray, add, edit Program_Selector, MenuHandler3
-  
-return
 
 
 
-close_script(script)
-{
-settitlematchmode 2
-DetectHiddenWindows, On
-myscript = %script% 
-IfWinExist, %myscript%
-    {
-    WinClose, %myscript%
-    }
-}
 
 
 
