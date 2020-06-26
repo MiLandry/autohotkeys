@@ -4,8 +4,8 @@ Development\Dev_Configurations.ahk
 Development\Developer.ahk
 Development\Web_app_Development.ahk
 Development\MarkupScript.ahk
-keyboard\Dvorak.ahk
 Keyboard\Dvorak.ahk
+Keyboard\Qwerty.ahk
 
 Home Computer\DesktopShortcutsHomeComputer.ahk
 keyboard\fields and applying script.ahk

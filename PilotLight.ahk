@@ -80,13 +80,6 @@ var = fields and applying script.ahk
 toggle_script(var)
 return
 
-F12::
-
-run Development\developmentlauncherlaptop.ahk
-Return
-
-
-
 
 
 #F4::F4

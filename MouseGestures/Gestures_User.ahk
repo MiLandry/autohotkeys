@@ -1,10 +1,5 @@
 #include FunctionLib.ahk
 Gestures:
-/*
- * Gestures
- */
-
-
 
 
 
@@ -30,6 +25,12 @@ send #e
 return
 }
 
+;change keyboard
+Gesture_U_D:
+{
+    cycleKeyboards()
+    return
+}
 
 
 ;open download folder
@@ -91,18 +92,26 @@ send {Delete}
 return
 }
 
-; down up right down left - A lazy R, for ctrl shift r for eclipse
-Gesture_D_U:
+
+
+
+;--- the Spitters
+Gesture_D_U_L:
 {
-    send ^+r
-    return
+sendPrimaryEmail()
+return
 }
 
-; open tasks down up down
 Gesture_D_U_D:
 {
-    openGoogleTasks()
-    return
+sendPrimaryUsername()
+return
+}
+
+Gesture_D_U_R:
+{
+sendPersonalPasswordVictor()
+return
 }
 
 

@@ -94,13 +94,7 @@ Snippets:
   ActivateChromeTab("3cols")
   ExitApp
   return
-; Functions
-;---------------
-;---------------
-onButtonClick()
-{
-  return
-}
+
 
 
 ^x::ExitApp
