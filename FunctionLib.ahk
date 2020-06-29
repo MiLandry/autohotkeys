@@ -320,31 +320,31 @@ return
 
 openOneNote()
 {
-SetTitleMatchMode 2
-IfWinExist OneNote
-{
-    WinActivate
-}
-else
-{
+    SetTitleMatchMode 2
+    IfWinExist OneNote
+    {
+        WinActivate
+    }
+    ; else
+    ; {
 
-if (isWorkComputer() || A_ComputerName = "laptophamster")
-{
-  var = C:\Program Files\Microsoft Office\Office16\ONENOTE.EXE
-  run %var%
-}
+    ; if (isWorkComputer() || A_ComputerName = "laptophamster")
+    ; {
+    ; var = C:\Program Files\Microsoft Office\Office16\ONENOTE.EXE
+    ; run %var%
+    ; }
 
-else
-{
-  var = C:\Program Files\Microsoft Office 15\root\office15\ONENOTE.EXE
-  run %var%
-}
+    ; else
+    ; {
+    ; var = C:\Program Files\Microsoft Office 15\root\office15\ONENOTE.EXE
+    ; run %var%
+    ; }
 
 
-    WinWait OneNote
-    WinActivate
-}
-return
+    ;     WinWait OneNote
+    ;     WinActivate
+    ; }
+    return
 }
 
 

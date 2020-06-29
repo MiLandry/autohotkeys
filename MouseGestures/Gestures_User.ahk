@@ -40,12 +40,11 @@ openDownloadsFolder()
 return
 }
 
-;open google drive
-; Downloads
+;maximize
+
 Gesture_U_R:
 {
-
-openGoogleDrive()
+send #{Up}
 return
 }
 

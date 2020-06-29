@@ -28,10 +28,16 @@ Gui, Add, Button, x+20 w200 h30 h30 gCalendar, Calendar
 Gui, Add, Text, x10 y+30, Tools
 Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\vscode.ico
 Gui, Add, Button, x+20 w200 h30 h30 gVSCode, VS&Code
+Gui, Add, Pic, x150 y+30 w30 h30 gOneNote, icons\onenote.ico
+Gui, Add, Button, x+20 w200 h30 h30 gOneNote, &OneNote
 Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\powershell.ico
 Gui, Add, Button, x+20 w200 h30 h30 gPowerShell, &PowerShell
 Gui, Add, Pic, x150 y+30 w30 h30 gSnippets, Guis\snippets.ico
 Gui, Add, Button, x+20 w200 h30 h30 gSnippets, &Snippets
+
+Gui, Add, Text, x10 y+30, Workflows
+; Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\vscode.ico
+Gui, Add, Button, x+20 w200 h30 h30 gTimesheets, Timesheets
 
 
 Gui, Add, Text, x10 y+30, Test
@@ -41,7 +47,7 @@ Opt2 := [ , "Red"]                                          ; hot flat backgroun
 Opt5 := [ , , ,"Gray"]                                      ; defaulted text color -> animation
 
 
-Gui, Show,x1300 y50 w500 h500, App selector
+Gui, Show,x1300 y50 w500 h1000, App selector
 
 ; style stuff
 ;---------------
@@ -78,6 +84,11 @@ Calendar:
   ExitApp
   return
 
+OneNote:
+openOneNote()
+  ExitApp
+  return
+
 PowerShell:
   ;bringUpApp("powershell", "C:\Users\miclandry\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell")
   Run C:\Users\miclandry\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell
@@ -94,6 +105,11 @@ Snippets:
   ActivateChromeTab("3cols")
   ExitApp
   return
+
+Timesheets:
+    run FSM\Timesheet.ahk
+    ExitApp
+    return
 
 
 
