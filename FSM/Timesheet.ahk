@@ -17,10 +17,13 @@ Gui, Font, cWhite
 
 
 
-Gui, Add, Text, x10 y10, grab this template then click next
+Gui, Add, Text, x10 y10, copy the timesheet teplate, name it correctly, and save into the timesheet folder
 ; Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\trello.ico
-Gui, Add, Button, x+20 w200 h30 gTrello, Timesheet
-Gui, Add, Button, x+20 w200 h30 gTrello, Next
+Gui, Add, Button, y+30 w200 h30 gStepOne, Automate
+Gui, Add, Text,y+30 , MANUAL TASK, doublecheck the date, you may have to change to saturday.
+Gui, Add, Text,y+30 , MANUAL TASK, fill out the TS
+Gui, Add, Text,y+30 , get approval?? idk more details needed
+Gui, Add, Button, y+30 w200 h30 gStepTwo, Automate email
 
 
 ; Gui, Add, Text, x10 y+30, Another header
@@ -36,31 +39,39 @@ Gui, Add, Button, x+20 w200 h30 gTrello, Next
 ; Opt5 := [ , , ,"Gray"]                                      ; defaulted text color -> animation
 
 
-Gui, Show,x1300 y50 w500 h500, My Cool Title
+Gui, Show,x1300 y50 w500 h1000, My Cool Title
 
 ; style stuff
 ;---------------
 ;---------------
-If !ImageButton.Create(HBT1, Opt1, Opt2, , , Opt5)
-   MsgBox, 0, ImageButton Error Btn1, % ImageButton.LastError
-   return
+; If !ImageButton.Create(HBT1, Opt1, Opt2, , , Opt5)
+;    MsgBox, 0, ImageButton Error Btn1, % ImageButton.LastError
+;    return
 
 
 
-GuiClose:
-  ExitApp
-  return
 
 ; Labels
 ;---------------
 ;---------------
 
 
-Trello:
-  ActivateChromeTab("Trello")
-  ExitApp
+StepOne:
+    ;   copy and rename the file.. just use datestamp as name...
+    FormatTime, TimeString, %A_NOW%, MM-dd-yyyy
+
+  FileCopy, C:\Users\miclandry\Documents\timesheets\template.doc, C:\Users\miclandry\Documents\timesheets\landry_timesheet_%TimeString%.doc
+  return
+
+  StepTwo:
+    ;   open outlook, prepare an email add new ts to attachment, compose a body, specify the correct recipient..
+    FormatTime, TimeString, %A_NOW%, MM-dd-yyyy
+    MsgBox, more details needed
   return
 
 
 
-^x::ExitApp
+
+GuiClose:
+  ExitApp
+  return

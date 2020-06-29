@@ -72,7 +72,7 @@ Return
 ; ______________________ TESTING
 !+t::
 ;MsgBox, sntahoei
-run gui.ahk
+run Test.ahk
 return
 
 ;_____________Middle row

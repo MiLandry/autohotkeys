@@ -60,6 +60,3 @@ Trello:
   ExitApp
   return
 
-
-
-^x::ExitApp
