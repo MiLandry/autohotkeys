@@ -15,5 +15,5 @@
 
 
 FormatTime, TimeString, %A_NOW%, MM-dd-yyyy
-
-  FileCopy, C:\Users\miclandry\Documents\timesheets\template.doc, C:\Users\miclandry\Documents\timesheets\landry_timesheet_%TimeString%.doc
+C:\Users\miclandry\Documents\timesheets
+Run C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE /c ipm.note /m "Monika.Prasad@vectorconsulting.com&subject=RE: Timesheet landry%TimeString%&cc=vpenumatsa@deloitte.com&body=Timesheet Attached"

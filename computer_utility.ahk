@@ -28,7 +28,7 @@ Responsibilities of this script:
 
 
 
-#F2::
+::#F2::
 FormatTime, TimeString, %A_NOW%, MM/dd/yyyy
 Send, %TimeString%
 return

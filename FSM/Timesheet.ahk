@@ -22,7 +22,7 @@ Gui, Add, Text, x10 y10, copy the timesheet teplate, name it correctly, and save
 Gui, Add, Button, y+30 w200 h30 gStepOne, Automate
 Gui, Add, Text,y+30 , MANUAL TASK, doublecheck the date, you may have to change to saturday.
 Gui, Add, Text,y+30 , MANUAL TASK, fill out the TS
-Gui, Add, Text,y+30 , get approval?? idk more details needed
+Gui, Add, Text,y+30 , Send to Monika
 Gui, Add, Button, y+30 w200 h30 gStepTwo, Automate email
 
 
@@ -66,7 +66,9 @@ StepOne:
   StepTwo:
     ;   open outlook, prepare an email add new ts to attachment, compose a body, specify the correct recipient..
     FormatTime, TimeString, %A_NOW%, MM-dd-yyyy
-    MsgBox, more details needed
+    Run C:\Users\miclandry\Documents\timesheets
+    Run C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE /c ipm.note /m "Monika.Prasad@vectorconsulting.com&subject=RE: Timesheet landry%TimeString%&cc=vpenumatsa@deloitte.com&body=Timesheet Attached"
+
   return
 
 
