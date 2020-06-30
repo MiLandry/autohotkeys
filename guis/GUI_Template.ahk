@@ -60,3 +60,54 @@ Trello:
   ExitApp
   return
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+another??
+
+OpenDateGui()
+{
+    msgbox, in d gui
+    Gui, +AlwaysOnTop
+    Gui, Color, Black
+    Gui, Font, cWhite
+
+    Gui, Add, Text, x10 y10, Sample Header text
+
+    Gui, Add, Button, x+20 w200 h30 gSlash, slash
+    ; Gui, Add, Button, x+20 w200 h30 gDash, dash
+    ; Gui, Add, Button, x+20 w200 h30 gBirth, birthday
+
+    Gui, Show,x1300 y50 w500 h1000, Date
+
+    Slash:
+        SpitDateSlash()
+        ;ExitApp
+        return
+
+    ; Dash:
+    ;     SpitDateHyphen()
+    ;     ExitApp
+    ;     return
+
+    ; Birth:
+    ;     Send 6/24/86
+    ;     ExitApp
+    ;     return
+
+
+
+}

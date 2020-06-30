@@ -27,8 +27,10 @@ Responsibilities of this script:
 ;~~~~~~~~~~~~~~~~~~  Date Send~~~~~~~~~~~~~
 
 
+msgbox asdf
 
-::#F2::
+::snth::
+msgbox asdfjijij
 FormatTime, TimeString, %A_NOW%, MM/dd/yyyy
 Send, %TimeString%
 return

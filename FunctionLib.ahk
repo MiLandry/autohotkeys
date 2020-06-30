@@ -618,3 +618,22 @@ ActivateChromeTab(soughtTab)
 }
 
 
+SpitDateSlash()
+{
+    FormatTime, TimeString, %A_NOW%, MM/dd/yyyy
+    Send, %TimeString%
+    return
+}
+
+SpitDateHyphen()
+{
+    FormatTime, TimeString, %A_NOW%, MM-dd-yyyy
+    Send, %TimeString%
+    return
+}
+
+SpitDateBirth()
+{
+    Send, 06/24/86
+    return
+}
