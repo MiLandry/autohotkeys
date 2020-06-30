@@ -96,24 +96,6 @@ Default_R_D_L_U:
     gosub TrayMenu_Reload
 return
 
-; Edit script/config.
-Default_L_D_R_U:
-
-
-    run C:\AppData\Roaming\Dropbox\bin\Dropbox.exe /home
-    WinWait Dropbox
-    WinActivate
-    return
-
-/*
-    Menu, EditFile, Add, Edit &Gestures.ahk         , TrayMenu_Edit
-    Menu, EditFile, Add, Edit Gestures_&Default.ahk , TrayMenu_Edit
-    Menu, EditFile, Add, Edit Gestures_&User.ahk    , TrayMenu_Edit
-    Menu, EditFile, Show
-    Menu, EditFile, Delete
-return
-
-*/
 Default_L_D:    ; Minimize
 
 	

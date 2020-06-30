@@ -4,8 +4,9 @@
 ; ok, something very mysterious, typing hyphen triggers hotstrings, its like a special meta character, its not needed in the :: ::
 #include FunctionLib.ahk
 
-;btw
-::vdx::by the way
+; not using endchars, hotstrings will autotrigger
+;#Hotstring EndChars -()[]{}:;'"/\,.?!`n `t
+
 
 
 
@@ -18,37 +19,39 @@
 ::rel::git checkout
 
 
-;date-
-::o;dk::
+;---------- date stuff
+
+;d-
+:*:o'::
 
 SpitDateSlash()
 return
 
 
-;dateh-
-::o;dkf::
+;dh-
+:*:of'::
 SpitDateHyphen()
 return
 
-;dateb-
-::o;dkv::
-SpitDateBirth()
-return
+;db-
+:*:ov'::
+{
+    SpitDateBirth()
+    return
+}
+
+
+;---------- vpn stuff
+
+;v-
+:*:n'::
+{
+    send ysayius1
+    return
+}
 
 
 
-#!F2::
-FormatTime, TimeString, %A_NOW%, MM-dd-yyyy
-Send, %TimeString%
-return
-
-#F3::
-Send, 06/24/1986
-return
-
-#!F3::
-Send, 06-24-1986
-return
 
 ; Gui, +AlwaysOnTop
 ; Gui, Color, Black

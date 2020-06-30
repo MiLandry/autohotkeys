@@ -162,9 +162,6 @@ sendAlternativePasswordVictor()
 
 
 
-;------------------random stuff TODO: refactor
-
-
 ; by the way, you cant use clipboard in functions, use a key remap instead
 sendYGrabber()
 {

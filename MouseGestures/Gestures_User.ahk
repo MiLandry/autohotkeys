@@ -288,8 +288,8 @@ Gesture_L_D_R_U_L:
     }
     Send {Blind}{Alt Down}{Tab}
     MouseGetPos, x, y
-    if (x < 0) ; Put it on the appropriate monitor, assumes only two monitors,
-    {          ; where the secondary monitor is to the left of the primary.
+    if (x > 0) ; Put it on the appropriate monitor, assumes only two monitors,
+    {          ; where the secondary monitor is to the left of the primary.  use < if secondary is to right, use > if to left
         WinWait, ahk_class TaskSwitcherWnd,, 0.2
         if !ErrorLevel
         {
