@@ -637,3 +637,58 @@ SpitDateBirth()
     Send, 06/24/86
     return
 }
+
+
+
+
+thesaurus()
+{
+
+      BlockInput, on 
+      prevClipboard = %clipboard% 
+      clipboard = 
+      Send, ^c 
+      BlockInput, off 
+      ClipWait, 2 
+      if ErrorLevel = 0 
+      { 
+         searchQuery=%clipboard% 
+         GoSub, thesaurus
+      } 
+      clipboard = %prevClipboard% 
+      return 
+
+   thesaurus:
+      StringReplace, searchQuery, searchQuery, `r`n, %A_Space%, All 
+      Loop 
+      { 
+         noExtraSpaces=1 
+         StringLeft, leftMost, searchQuery, 1 
+         IfInString, leftMost, %A_Space% 
+         { 
+            StringTrimLeft, searchQuery, searchQuery, 1 
+            noExtraSpaces=0 
+         } 
+         StringRight, rightMost, searchQuery, 1 
+         IfInString, rightMost, %A_Space% 
+         { 
+            StringTrimRight, searchQuery, searchQuery, 1 
+            noExtraSpaces=0 
+         } 
+         If (noExtraSpaces=1) 
+            break 
+      } 
+      StringReplace, searchQuery, searchQuery, \, `%5C, All 
+      StringReplace, searchQuery, searchQuery, %A_Space%, +, All 
+      StringReplace, searchQuery, searchQuery, `%, `%25, All 
+      IfInString, searchQuery, . 
+      { 
+         IfInString, searchQuery, + 
+            Run, chrome.exe http://thesaurus.com/browse/%searchQuery% 
+         else 
+            Run, chrome.exe %searchQuery% 
+      } 
+      else 
+         Run, chrome.exe http://thesaurus.com/browse/%searchQuery% 
+   return
+}
