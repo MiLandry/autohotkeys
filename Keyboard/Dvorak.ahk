@@ -47,7 +47,7 @@ o::d
 p::,
 [::z
 ]::/
-Shift & [:: Send <
+Shift & [:: Send Z
 Shift & ]:: Send ?
 ;\::\
 

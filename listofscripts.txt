@@ -2,6 +2,7 @@ MouseGestures\Gestures.ahk
 320\320mph.ahk
 Development\Dev_Configurations.ahk
 Development\Developer.ahk
+Developer.ahk
 Development\Web_app_Development.ahk
 Development\MarkupScript.ahk
 Keyboard\Dvorak.ahk
