@@ -20,16 +20,19 @@ return
 
 #x::
 {
-sendPrimaryUsername()
-return
+  ; MsgBox, a
+  sendPrimaryUsername()
+  return
 
 }
 
 
-#!x::
+
+#+x::
 {
-sendSecondaryUsername()
-return
+  ; MsgBox, b
+  sendSecondaryUsername()
+  return
 }
 
 

@@ -51,6 +51,12 @@ return
 }
 
 
+;wspath-
+:*:xaq;df'::
+{
+    send C:\Users\miclandry\miclandry_edsp_Omega_main_Dev_3\edsp_em_vob2\
+    return
+}
 
 
 ; Gui, +AlwaysOnTop

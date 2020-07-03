@@ -28,6 +28,8 @@ Gui, Add, Button, x+20 w200 h30 h30 gCalendar, Calendar
 Gui, Add, Text, x10 y+30, Tools
 Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\vscode.ico
 Gui, Add, Button, x+20 w200 h30 h30 gVSCode, VS&Code
+Gui, Add, Pic, x150 y+30 w30 h30 gSkype, icons\skype.ico
+Gui, Add, Button, x+20 w200 h30 h30 gSkype, &Skype
 Gui, Add, Pic, x150 y+30 w30 h30 gOneNote, icons\onenote.ico
 Gui, Add, Button, x+20 w200 h30 h30 gOneNote, &OneNote
 Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\powershell.ico
@@ -81,6 +83,11 @@ Mail:
 Calendar:
   openWorkEmail()
   Send ^2
+  ExitApp
+  return
+
+Skype:
+  WinActivate, Skype
   ExitApp
   return
 

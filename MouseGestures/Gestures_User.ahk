@@ -34,18 +34,19 @@ Gesture_U_D:
 
 
 ;open download folder
+;snap to left monitor
 Gesture_U_L:
 {
-openDownloadsFolder()
-return
+    send #+{Right}
+    return
 }
 
-;maximize
+;snap to right monitor
 
 Gesture_U_R:
 {
-send #{Up}
-return
+    send #+{Right}
+    return
 }
 
 
@@ -124,11 +125,11 @@ Gesture_L_D_L:
     return
 }
 
-;move interface to other monitor
+;downloads
 Gesture_L_U:
 {
-    send #+{Left}
-    return
+openDownloadsFolder()
+return
 }
 
 
@@ -149,10 +150,10 @@ send #{Right}
 return
 }
 
-; right monitor
+; max
 Gesture_R_U:
-{
-    send #+{Right}
+{   
+    send #{Up}
     return
 }
 

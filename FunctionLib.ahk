@@ -60,6 +60,7 @@ sendPrimaryUsername()
 
 sendSecondaryUsername()
 {
+    ; msgbox, sendsecont
     if (isWorkComputer())
     {
         var := getPersonalUsername()
