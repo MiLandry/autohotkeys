@@ -18,6 +18,9 @@
 ;gco
 ::rel::git checkout
 
+;gcm
+::rec::git commit -a -m "
+
 
 ;---------- date stuff
 
