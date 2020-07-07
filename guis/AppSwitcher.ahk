@@ -27,39 +27,62 @@ Gui, Add, Button, x+20 w200 h30 h30 gMail, &Mail
 Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\calendar.ico
 Gui, Add, Button, x+20 w200 h30 h30 gCalendar, Calendar
 
+
+
+
 Gui, Add, Text, x10 y+30, Tools
-Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\vscode.ico
+
+Gui, Add, Pic, x150 y+30 w30 h30 gVSCode, Guis\vscode.ico
 Gui, Add, Button, x+20 w200 h30 h30 gVSCode, VS&Code
+Gui, Add, Pic, x150 y+30 w30 h30 gRAD, icons\Rad.ico
+Gui, Add, Button, x+20 w200 h30 h30 gRAD, RAD
+Gui, Add, Pic, x150 y+30 w30 h30 gDBeaver, icons\Database.ico
+Gui, Add, Button, x+20 w200 h30 h30 gDBeaver, &DBeaver
 Gui, Add, Pic, x150 y+30 w30 h30 gSkype, icons\skype.ico
 Gui, Add, Button, x+20 w200 h30 h30 gSkype, &Skype
 Gui, Add, Pic, x150 y+30 w30 h30 gOneNote, icons\onenote.ico
 Gui, Add, Button, x+20 w200 h30 h30 gOneNote, &OneNote
-Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\powershell.ico
+Gui, Add, Pic, x150 y+30 w30 h30 gPowerShell, Guis\powershell.ico
 Gui, Add, Button, x+20 w200 h30 h30 gPowerShell, &PowerShell
 Gui, Add, Pic, x150 y+30 w30 h30 gSnippets, Guis\snippets.ico
 Gui, Add, Button, x+20 w200 h30 h30 gSnippets, &Snippets
 
+
+
+
+
+Gui, Add, Text, x10 y+30, Projects
+
+Gui, Add, Pic, x150 y+30 w30 h30 gCMS, icons\Virginia.ico
+Gui, Add, Button, x+20 w200 h30 h30 gCMS, CMS
+
 Gui, Add, Text, x10 y+30, Workflows
+
 ; Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\vscode.ico
-Gui, Add, Button, x+20 w200 h30 h30 gTimesheets, Timesheets
+Gui, Add, Button, x150 y+30 w200 h30 h30 gTimesheets, Timesheets
+Gui, Add, Button, x150 y+30 w200 h30 h30 gTest, Test
 
 
-Gui, Add, Text, x10 y+30, Test
-Gui, Add, Button, vBT1 w200 hwndHBT1, Button 1`nLine 2
-Opt1 := [0, 0x80CF0000, , "White", "H", , "Red", 4]         ; normal flat background & text color
-Opt2 := [ , "Red"]                                          ; hot flat background color
-Opt5 := [ , , ,"Gray"]                                      ; defaulted text color -> animation
+
+
+
+; Gui, Add, Text, x10 y+30, Test
+; Gui, Add, Button, vBT1 w200 hwndHBT1, Button 1`nLine 2
+; Opt1 := [0, 0x80CF0000, , "White", "H", , "Red", 4]         ; normal flat background & text color
+; Opt2 := [ , "Red"]                                          ; hot flat background color
+; Opt5 := [ , , ,"Gray"]                                      ; defaulted text color -> animation
 
 
 Gui, Show,x1300 y50 w500 h1000, App selector
 
-; style stuff
-;---------------
-;---------------
-If !ImageButton.Create(HBT1, Opt1, Opt2, , , Opt5)
-   MsgBox, 0, ImageButton Error Btn1, % ImageButton.LastError
-   return
+; ; style stuff
+; ;---------------
+; ;---------------
+; If !ImageButton.Create(HBT1, Opt1, Opt2, , , Opt5)
+;    MsgBox, 0, ImageButton Error Btn1, % ImageButton.LastError
+;    return
 
+return
 
 
 GuiClose:
@@ -109,21 +132,69 @@ PowerShell:
   ExitApp
   return
 
+
+
+
+
+
+; tools
+
+
+
+
+
 VSCode:
   WinActivate, Visual Studio Code
   ExitApp
   return
 
+RAD:
+  WinActivate, WebSphere
+  ExitApp
+  return
+
+DBeaver:
+  bringUpApp("DBeaver", "C:\Users\miclandry\AppData\Local\DBeaver\dbeaver.exe -nl en")
+  ExitApp
+  return
 
 Snippets:  
   ActivateChromeTab("3cols")
   ExitApp
   return
 
+
+
+
+
+
+;Projects
+
+
+
+
+CMS:
+WinActivate, Internet Explorer
+  ; bringUpApp("vaCMS", "C:\Program Files\Internet Explorer\iexplore.exe")
+  ExitApp
+  return
+
+
+;workflows
+
 Timesheets:
     run FSM\Timesheet.ahk
     ExitApp
     return
+
+Test:
+  ; MsgBox example
+  Run Workers\livacms.ahk
+   ExitApp
+  return
+  ; MsgBox example
+
+
 
 
 
