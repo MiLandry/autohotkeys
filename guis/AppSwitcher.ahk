@@ -18,6 +18,8 @@ Gui, Font, cWhite
 
 
 Gui, Add, Text, x10 y10, Admin
+Gui, Add, Pic, x150 y+30 w30 h30 gZoom, icons\Zoom.ico
+Gui, Add, Button, x+20 w200 h30 gZoom, &Zoom
 Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\trello.ico
 Gui, Add, Button, x+20 w200 h30 gTrello, &Trello
 Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\outlook.ico
@@ -68,6 +70,11 @@ GuiClose:
 ;---------------
 ;---------------
 
+
+Zoom:
+  bringUpApp("Zoom", "C:\Program Files (x86)\Zoom\bin\Zoom.exe")
+  ExitApp
+  return
 
 Trello:
   ActivateChromeTab("Trello")

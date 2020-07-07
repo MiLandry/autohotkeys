@@ -178,6 +178,7 @@ return
 
 ;------------------Helpers
 
+; the default 'switch to this app, or open it if its not.'
 bringUpApp( appName, appLocation)
 {
     ;msgbox %appName%
