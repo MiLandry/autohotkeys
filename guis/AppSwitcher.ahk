@@ -128,7 +128,7 @@ openOneNote()
 
 PowerShell:
   ;bringUpApp("powershell", "C:\Users\miclandry\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell")
-  Run C:\Users\miclandry\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell
+  openPowerShell()
   ExitApp
   return
 

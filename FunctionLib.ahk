@@ -346,6 +346,20 @@ openOneNote()
     return
 }
 
+openPowerShell()
+{
+    if (isWorkComputer())
+    {
+      Run C:\Users\miclandry\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell
+      return
+    }
+    else
+    {
+        Run C:\Users\Mike\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell ISE
+        return
+    }
+}
+
 
 openGoogleDrive()
 {
