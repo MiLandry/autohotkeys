@@ -19,7 +19,7 @@
 ::rel::git checkout
 
 ;gcm
-::rec::git commit -a -m "
+::rec::git commit -a -m
 
 
 ;---------- date stuff
@@ -62,12 +62,17 @@ return
 }
 
 
-; Gui, +AlwaysOnTop
-; Gui, Color, Black
-; Gui, Font, cWhite
+
+;automation, worker
+;cms-
+:*:eca'::
+{
+    logIntoCMS()
+    return
+
+}
 
 
 
-; Gui, Add, Text, x10 y10, Sample Header text
-; Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\trello.ico
-; Gui, Add, Button, x+20 w200 h30 gTrello, &Trello
+
+

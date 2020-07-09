@@ -691,3 +691,10 @@ thesaurus()
          Run, chrome.exe http://thesaurus.com/browse/%searchQuery% 
    return
 }
+
+
+logIntoCMS()
+{
+    Run Workers\livacms.ahk
+    return
+}
