@@ -174,7 +174,8 @@ Snippets:
 
 
 CMS:
-WinActivate, Internet Explorer
+WinActivate, Mozilla
+  ; I don' think this will work... if you open the url it creates a popup and focus will be lost.
   ; bringUpApp("vaCMS", "C:\Program Files\Internet Explorer\iexplore.exe")
   ExitApp
   return
@@ -190,7 +191,7 @@ Timesheets:
 Test:
   ; MsgBox example
   Run Workers\livacms.ahk
-   ExitApp
+  ExitApp
   return
   ; MsgBox example
 

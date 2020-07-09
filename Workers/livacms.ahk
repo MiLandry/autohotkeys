@@ -4,5 +4,29 @@ Sleep 500
 send {tab}
 Sleep 500
 send Welcome8
+Sleep 500
+send {tab}
+Sleep 500
+send {tab}
+Sleep 100
+; click disclaimer link
+send {Enter}
+
+Sleep 1000
+send {tab}
+Sleep 1000
+; send {tab}
+; Sleep 1000
+; click accept
+send {Enter}
+
+
+; login
+Sleep 1000
+Send, +{tab}
+Sleep 1000
+send {Enter}
+
+
 
 ExitApp
