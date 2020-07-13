@@ -22,9 +22,11 @@ Gui, Add, Pic, x150 y+30 w30 h30 gZoom, icons\Zoom.ico
 Gui, Add, Button, x+20 w200 h30 gZoom, &Zoom
 Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\trello.ico
 Gui, Add, Button, x+20 w200 h30 gTrello, &Trello
-Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\outlook.ico
+Gui, Add, Pic, x150 y+30 w30 h30 gJira, Guis\Jira.ico
+Gui, Add, Button, x+20 w200 h30 gJira, &Jira
+Gui, Add, Pic, x150 y+30 w30 h30 gMail, Guis\outlook.ico
 Gui, Add, Button, x+20 w200 h30 h30 gMail, &Mail
-Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\calendar.ico
+Gui, Add, Pic, x150 y+30 w30 h30 gCalendar, Guis\calendar.ico
 Gui, Add, Button, x+20 w200 h30 h30 gCalendar, Calendar
 
 
@@ -58,7 +60,6 @@ Gui, Add, Button, x+20 w200 h30 h30 gCMS, CMS
 
 Gui, Add, Text, x10 y+30, Workflows
 
-; Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\vscode.ico
 Gui, Add, Button, x150 y+30 w200 h30 h30 gTimesheets, Timesheets
 Gui, Add, Button, x150 y+30 w200 h30 h30 gTest, Test
 
@@ -101,6 +102,11 @@ Zoom:
 
 Trello:
   ActivateChromeTab("Trello")
+  ExitApp
+  return
+
+Jira:
+  ActivateChromeTab("Jira")
   ExitApp
   return
 

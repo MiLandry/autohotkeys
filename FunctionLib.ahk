@@ -115,7 +115,7 @@ sendDefaultPasswordCharlie()
     else
     {
         sendPersonalPasswordCharlie()
-    }  
+    }
 }
 
 sendAlternativePasswordCharlie()
@@ -127,7 +127,7 @@ sendAlternativePasswordCharlie()
     else
     {
         sendWorkPasswordCharlie()
-    }  
+    }
 }
 
 
@@ -140,7 +140,7 @@ sendDefaultPasswordVictor()
     else
     {
         sendPersonalPasswordVictor()
-    }  
+    }
 }
 
 sendAlternativePasswordVictor()
@@ -152,7 +152,7 @@ sendAlternativePasswordVictor()
     else
     {
         sendWorkPasswordVictor()
-    }  
+    }
 }
 
 
@@ -172,7 +172,7 @@ send docker ps
 
 sendLGrabber()
 {
-send docker kill 
+send docker kill
 return
 }
 
@@ -193,7 +193,7 @@ bringUpApp( appName, appLocation)
     {
         ;msgbox %appLocation%
         run %appLocation%
-        WinWait - 
+        WinWait -
         WinActivate
         WinMaximize
     }
@@ -222,7 +222,7 @@ close_script(script)
 {
     settitlematchmode 2
     DetectHiddenWindows, On
-    myscript = %script% 
+    myscript = %script%
     IfWinExist, %myscript%
         {
         WinClose, %myscript%
@@ -234,7 +234,7 @@ Copy()
 {
     Send ^{vk43} ;send ctrl c
     return
-} 
+}
 
 Paste()
 {
@@ -377,7 +377,7 @@ run C:\Users\miclandry\Downloads
 else
 {
 run Z:\Downloads
-     
+
 }
 return
 }
@@ -429,7 +429,7 @@ IfWinExist - Bugzilla
 else
 {
     run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe https://bugz.osi-atl.net
-;    WinWait - 
+;    WinWait -
 ;    WinActivate
 ;    WinMaximize
 }
@@ -521,7 +521,7 @@ cycleKeyboards()
 {
     If WinExist("PilotLight.ahk" . " ahk_class AutoHotkey")
       msgbox, ASDF;ASLDKFJA;S
-      
+
     ; msgbox, in cycleKeyboards
     DetectHiddenWindows, On
     settitlematchmode 2
@@ -558,7 +558,7 @@ cycleKeyboards()
 }
 
 
-    
+
 toggle_script(script)
 {
 DetectHiddenWindows, On
@@ -651,58 +651,65 @@ SpitDateBirth()
     return
 }
 
+SpitDateTime()
+{
+    FormatTime, TimeString, %A_NOW%, ss/mm/hh/dd/MM/yyyy
+    Send, %TimeString%
+    return
+}
+
 
 
 
 thesaurus()
 {
 
-      BlockInput, on 
-      prevClipboard = %clipboard% 
-      clipboard = 
-      Send, ^c 
-      BlockInput, off 
-      ClipWait, 2 
-      if ErrorLevel = 0 
-      { 
-         searchQuery=%clipboard% 
+      BlockInput, on
+      prevClipboard = %clipboard%
+      clipboard =
+      Send, ^c
+      BlockInput, off
+      ClipWait, 2
+      if ErrorLevel = 0
+      {
+         searchQuery=%clipboard%
          GoSub, thesaurus
-      } 
-      clipboard = %prevClipboard% 
-      return 
+      }
+      clipboard = %prevClipboard%
+      return
 
    thesaurus:
-      StringReplace, searchQuery, searchQuery, `r`n, %A_Space%, All 
-      Loop 
-      { 
-         noExtraSpaces=1 
-         StringLeft, leftMost, searchQuery, 1 
-         IfInString, leftMost, %A_Space% 
-         { 
-            StringTrimLeft, searchQuery, searchQuery, 1 
-            noExtraSpaces=0 
-         } 
-         StringRight, rightMost, searchQuery, 1 
-         IfInString, rightMost, %A_Space% 
-         { 
-            StringTrimRight, searchQuery, searchQuery, 1 
-            noExtraSpaces=0 
-         } 
-         If (noExtraSpaces=1) 
-            break 
-      } 
-      StringReplace, searchQuery, searchQuery, \, `%5C, All 
-      StringReplace, searchQuery, searchQuery, %A_Space%, +, All 
-      StringReplace, searchQuery, searchQuery, `%, `%25, All 
-      IfInString, searchQuery, . 
-      { 
-         IfInString, searchQuery, + 
-            Run, chrome.exe http://thesaurus.com/browse/%searchQuery% 
-         else 
-            Run, chrome.exe %searchQuery% 
-      } 
-      else 
-         Run, chrome.exe http://thesaurus.com/browse/%searchQuery% 
+      StringReplace, searchQuery, searchQuery, `r`n, %A_Space%, All
+      Loop
+      {
+         noExtraSpaces=1
+         StringLeft, leftMost, searchQuery, 1
+         IfInString, leftMost, %A_Space%
+         {
+            StringTrimLeft, searchQuery, searchQuery, 1
+            noExtraSpaces=0
+         }
+         StringRight, rightMost, searchQuery, 1
+         IfInString, rightMost, %A_Space%
+         {
+            StringTrimRight, searchQuery, searchQuery, 1
+            noExtraSpaces=0
+         }
+         If (noExtraSpaces=1)
+            break
+      }
+      StringReplace, searchQuery, searchQuery, \, `%5C, All
+      StringReplace, searchQuery, searchQuery, %A_Space%, +, All
+      StringReplace, searchQuery, searchQuery, `%, `%25, All
+      IfInString, searchQuery, .
+      {
+         IfInString, searchQuery, +
+            Run, chrome.exe http://thesaurus.com/browse/%searchQuery%
+         else
+            Run, chrome.exe %searchQuery%
+      }
+      else
+         Run, chrome.exe http://thesaurus.com/browse/%searchQuery%
    return
 }
 
