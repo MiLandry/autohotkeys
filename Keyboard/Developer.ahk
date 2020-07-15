@@ -4,7 +4,7 @@ SoundPlay, Sounds\developer.mp3
 ;****** Initialization
 
 
-; NB 
+; NB
 ;the keyboard remapping is broken out from the shortcut keys since the entire script must be disabled when the modifier keys are suppressed.
 ; note the idiomatic technique whereby the script is disabled when certain keys are pressed in order to avoid chaining inputs.
 ; This program is launched by the "programmer loader.ahk" script
@@ -12,8 +12,8 @@ SoundPlay, Sounds\developer.mp3
 
 Loop {
    If  !GetKeyState("Control")
-   and !GetKeyState("Alt") 
-   and !GetKeyState("LWin") 
+   and !GetKeyState("Alt")
+   and !GetKeyState("LWin")
    and !GetKeyState("RWin") {
       Suspend, Off
    } else {
@@ -136,15 +136,15 @@ $Backspace:: send {Del}
 
 q::p
 w::r
-e::c 
-r::g 
-t::k 
-y::; 
+e::c
+r::g
+t::k
+y::;
 u::y
-i::l 
-o::d 
-p::, 
-[::z 
+i::l
+o::d
+p::,
+[::z
 ]::^
 Shift & [:: Send Z
 Shift & ]:: Send ~
@@ -157,32 +157,31 @@ Shift & ]:: Send ~
 Capslock:: send {BackSpace}
 
 a::s
-s::n 
-d::t 
-f::h 
-g::f 
+s::n
+d::t
+f::h
+g::f
 h::'
 j::i
-k::e 
-l::o 
-`;::a 
+k::e
+l::o
+`;::a
 '::-
 
 Shift & h::
-send {'}
+send {"}
 return
-
 
 
 
 ;                                            Bottom Row
 
-z::j 
+z::j
 x::w
 c::m
 v::b
-b::x 
-n::v 
+b::x
+n::v
 m::u
 ,::q
 .::.
