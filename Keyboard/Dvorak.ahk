@@ -1,16 +1,6 @@
-
-
 Menu, Tray, Icon, icons\keyboard.ico
 
 SoundPlay, Sounds\landry.mp3
-
-
-; ^^^^^^^^^^ CTL
-; !!!!!!!!!!!!! ALT
-
-
-; QWERTY to Dvorak mapping 
-
 
 ~RWin::Suspend, On
 ~RWin UP::Suspend, Off
@@ -28,22 +18,18 @@ SoundPlay, Sounds\landry.mp3
 
 ;Number Row
 
-;`::`
-
-
-
 
 ;Top Row
 
 q::p
 w::r
-e::c 
-r::g 
-t::k 
-y::; 
-u::y 
-i::l 
-o::d 
+e::c
+r::g
+t::k
+y::;
+u::y
+i::l
+o::d
 p::,
 [::z
 ]::/
@@ -58,15 +44,15 @@ $Backspace:: send {Del}
 Capslock:: send {BackSpace}
 
 
-a::s 
-s::n 
-d::t 
-f::h 
+a::s
+s::n
+d::t
+f::h
 g::f
 h::'
 j::i
-k::e 
-l::o 
+k::e
+l::o
 `;::a
 '::-
 
@@ -74,16 +60,15 @@ l::o
 
 ;Bottom Row
 
-z::j 
+z::j
 x::w
 c::m
-v::b 
-b::x 
-n::v 
-m::u 
+v::b
+b::x
+n::v
+m::u
 ,::q
-;.::. 
-;/::=
+
 
 
 

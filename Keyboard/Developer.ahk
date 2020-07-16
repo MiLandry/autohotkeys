@@ -10,17 +10,7 @@ SoundPlay, Sounds\developer.mp3
 ; This program is launched by the "programmer loader.ahk" script
 
 
-Loop {
-   If  !GetKeyState("Control")
-   and !GetKeyState("Alt")
-   and !GetKeyState("LWin")
-   and !GetKeyState("RWin") {
-      Suspend, Off
-   } else {
-      Suspend, On
-   }--------------------------------------
-   Sleep, 50--------------------------------------------------------------------------------------------------------------------
-}
+
 
 ~RWin::Suspend, On
 ~RWin UP::Suspend, Off
@@ -44,42 +34,13 @@ Shift & 1::Send 1
 Shift & 2::Send 2
 
 
-;/*
-
 3::{
-
-;*/
-
-
-
-
-/*
-
-
-
-3::
-{
-if (GetKeyState(Shift[D]))
-MsgBox "aeuaeouaoeu"
-else
-{
-    Send {{}{Enter}{}}{Up}{Enter}
-    Exit
-}
-exit
-}
-
-
-*/
-
-
 
 Shift & 3::
 {
 Send {Numpad3}
 exit
 }
-
 
 
 
@@ -184,8 +145,7 @@ b::x
 n::v
 m::u
 ,::q
-.::.
-;/::
+
 
 
 !j:: send <
