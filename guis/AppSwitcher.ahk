@@ -106,7 +106,8 @@ Trello:
   return
 
 Jira:
-  ActivateChromeTab("Jira")
+  ; ActivateChromeTab("Jira")
+  run guis\GUI_Jira.ahk
   ExitApp
   return
 
@@ -164,7 +165,7 @@ DBeaver:
   ExitApp
   return
 
-Snippets:  
+Snippets:
   ActivateChromeTab("3cols")
   ExitApp
   return

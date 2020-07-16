@@ -594,6 +594,23 @@ getLaptopComputerName()
 	return "DESKTOP-PNEL2RP"
 }
 
+openNewChromeTab(URL)
+{
+    Browser = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+
+    IfWinExist ahk_exe chrome.exe
+    {
+        WinGet, chromePID, PID, ahk_exe chrome.exe
+        Run %Browser% "%URL%"
+    }
+    else
+        Run %Browser% "%URL%",,, chromePID
+    WinWait ahk_pid %chromePID%
+    WinSet, Bottom,, ahk_pid %chromePID% ; send the window beneath all other windows
+    return
+
+}
+
 
 ; Activates tab in Google Chrome if it exists
 ; Returns true if exists, false if does not exist
