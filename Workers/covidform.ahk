@@ -1,3 +1,10 @@
+;home page
+
+Sleep,5000
+CoordMode, Mouse, Screen
+Click, 1813, 1049
+return
+
 Sleep 2000
 send var161
 Sleep 500

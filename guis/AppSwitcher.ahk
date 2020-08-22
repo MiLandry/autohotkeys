@@ -60,7 +60,7 @@ Gui, Add, Button, w200 h30 gSnippets, &Snippets
 
 Gui, Add, Text, ym, Workflows and Automations
 Gui, Add, Button, w200  h30 gTimesheets, Timesheets
-Gui, Add, Button, w200  h30 gTest, Test something random
+Gui, Add, Button, w200  h30 gTest, Test something
 
 
 ; Gui, Add, Text, x10 y+30, Projects
@@ -185,16 +185,15 @@ WinActivate, Mozilla
 ;workflows
 
 Timesheets:
-    run FSM\Timesheet.ahk
-    ExitApp
-    return
-
-Test:
-  ; MsgBox example
-  Run Workers\livacms.ahk
+  run FSM\Timesheet.ahk
   ExitApp
   return
-  ; MsgBox example
+
+Test:
+  Run Workers\covid-energy\homepage.ahk
+  ExitApp
+  return
+
 
 
 
