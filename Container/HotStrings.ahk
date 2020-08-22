@@ -70,3 +70,14 @@ return
 
 }
 
+
+
+; ---- sql
+; a simple query
+;que-
+:*:,mk'::
+{
+    run guis\GUI_SqlQuery.ahk
+    return
+
+}

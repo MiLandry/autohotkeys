@@ -50,7 +50,8 @@ Gui, Add, Pic, x150 y+30 w30 h30 gSnippets, Guis\snippets.ico
 Gui, Add, Button, x+20 w200 h30 h30 gSnippets, &Snippets
 
 
-
+; Gui, Add, Edit, vTable ym  ; The ym option starts a new column of controls.
+; Gui, Add, Edit, vColumn
 
 
 Gui, Add, Text, x10 y+30, Projects
@@ -67,6 +68,7 @@ Gui, Add, Button, x150 y+30 w200 h30 h30 gTest, Test
 
 
 
+
 ; Gui, Add, Text, x10 y+30, Test
 ; Gui, Add, Button, vBT1 w200 hwndHBT1, Button 1`nLine 2
 ; Opt1 := [0, 0x80CF0000, , "White", "H", , "Red", 4]         ; normal flat background & text color
@@ -74,7 +76,7 @@ Gui, Add, Button, x150 y+30 w200 h30 h30 gTest, Test
 ; Opt5 := [ , , ,"Gray"]                                      ; defaulted text color -> animation
 
 
-Gui, Show,x1300 y50 w500 h1000, App selector
+Gui, Show,x1200 y50 w1000 h1000, App selector
 
 ; ; style stuff
 ; ;---------------
