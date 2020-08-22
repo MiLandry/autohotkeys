@@ -14,5 +14,5 @@ return
 ; Click, 1600, 370
 ; return
 
-MsgBox, you just got clicked on
+
 ExitApp

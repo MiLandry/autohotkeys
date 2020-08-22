@@ -35,6 +35,9 @@ Gui, Add, Pic, w30 h30 gPowerShell, Guis\powershell.ico
 Gui, Add, Pic, w30 h30 gSnippets, Guis\snippets.ico
 
 
+Gui, Add, Text, y+30, Apps under development
+
+Gui, Add, Pic, w30 h30 gVSCode, Guis\vscode.ico
 
 
 
@@ -58,8 +61,15 @@ Gui, Add, Button, w200 h30 gOneNote, &OneNote
 Gui, Add, Button, w200 h30 gPowerShell, &PowerShell
 Gui, Add, Button, w200 h30 gSnippets, &Snippets
 
+;apps under development
+
+Gui, Add, Button, y+50 w200 h30 gVaCovid, VA Covid
+
+
+
 Gui, Add, Text, ym, Workflows and Automations
 Gui, Add, Button, w200  h30 gTimesheets, Timesheets
+Gui, Add, Button, w200  h30 gIonicserve, ionic serve
 Gui, Add, Button, w200  h30 gTest, Test something
 
 
@@ -171,7 +181,10 @@ Snippets:
 
 ;Projects
 
-
+VaCovid:
+  ActivateChromeTab("VA COVID Response")
+  ExitApp
+  return
 
 
 CMS:
@@ -186,6 +199,15 @@ WinActivate, Mozilla
 
 Timesheets:
   run FSM\Timesheet.ahk
+  ExitApp
+  return
+
+Ionicserve:
+  WinActivate, Windows PowerShell
+  Sleep, 1000
+  send ionic serve
+  Sleep, 500
+  send {Enter}
   ExitApp
   return
 
