@@ -67,10 +67,14 @@ Gui, Add, Button, y+50 w200 h30 gVaCovid, VA Covid
 
 
 
+
+
+
 Gui, Add, Text, ym, Workflows and Automations
 Gui, Add, Button, w200  h30 gTimesheets, Timesheets
 Gui, Add, Button, w200  h30 gIonicserve, ionic serve
 Gui, Add, Button, w200  h30 gTest, Test something
+Gui, Add, Button, w200  h30 gMemDetails, member details
 
 
 ; Gui, Add, Text, x10 y+30, Projects
@@ -216,8 +220,10 @@ Test:
   ExitApp
   return
 
-
-
+MemDetails:
+  Run Workers\covid-energy\memberdetail.ahk
+  ExitApp
+  return
 
 
 
