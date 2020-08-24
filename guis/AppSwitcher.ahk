@@ -7,11 +7,7 @@ SetTitleMatchMode 2
 
 
 
-; Gui Layout
-;---------------
-;---------------
-
-Gui, +AlwaysOnTop
+; Gui, +AlwaysOnTop
 Gui, Color, Black
 Gui, Font, cWhite
 
@@ -37,10 +33,13 @@ Gui, Add, Pic, w30 h30 gSnippets, Guis\snippets.ico
 
 Gui, Add, Text, y+30, Apps under development
 
-Gui, Add, Pic, w30 h30 gVSCode, Guis\vscode.ico
+Gui, Add, Pic, w30 h30 gVaCovid, Guis\fixme.ico
 
 
+Gui, Add, Text, y+30, IDEs
 
+Gui, Add, Pic, w30 h30 gOpenAHKIDE, Guis\vscode.ico
+Gui, Add, Pic, w30 h30 gOpenVACOVIDIDE, Guis\vscode.ico
 
 
 ; Column for buttons
@@ -66,9 +65,15 @@ Gui, Add, Button, w200 h30 gSnippets, &Snippets
 Gui, Add, Button, y+50 w200 h30 gVaCovid, VA Covid
 
 
+;IDES
+
+Gui, Add, Button, y+50  w200 h30 gOpenAHKIDE, AHK Code
+Gui, Add, Button, w200 h30 gOpenVACOVIDIDE, COVID Code
 
 
 
+
+;NEW COLUMN OF WIDGETS
 
 Gui, Add, Text, ym, Workflows and Automations
 Gui, Add, Button, w200  h30 gTimesheets, Timesheets
@@ -83,8 +88,10 @@ Gui, Add, Button, w200  h30 gMemDetails, member details
 ; Gui, Add, Button, x+20 w200 h30 h30 gCMS, CMS
 
 
+;NEW COLUMN OF WIDGETS
 
-
+Gui, Add, Text, ym, Dates and hotstrings and spitters
+Gui, Add, Button, w200  h30 gTodayDate, Today mm/dd/yyyy
 
 
 
@@ -225,6 +232,50 @@ MemDetails:
   ExitApp
   return
 
+OpenAHKIDE:
+  WinActivate, Visual Studio Code
+  Sleep, 1000
+  send ^+p
+  Sleep 500
+  send fileopenfold
+  Sleep 200
+  send {Enter}
+  Sleep 200
+  send autohotkeys-master
+  ; Sleep 300
+  ; send {Tab}
+  Sleep 2000
+  send {Enter}
+    Sleep 2000
+  send {Enter}
+  ExitApp
+  return
+
+OpenVACOVIDIDE:
+  WinActivate, Visual Studio Code
+  Sleep, 1000
+  send ^+p
+  Sleep 500
+  send fileopenfold
+  Sleep 200
+  send {Enter}
+  Sleep 200
+  send va-covid19
+  ; Sleep 300
+  ; send {Tab}
+  Sleep 2000
+  send {Enter}
+    Sleep 2000
+  send {Enter}
+  ExitApp
+  return
+
+
+TodayDate:
+  Run Workers\spit-today.ahk
+  ; bringUpApp("Zoom", "C:\Program Files (x86)\Zoom\bin\Zoom.exe")
+  ExitApp
+  return
 
 
 ^x::ExitApp
