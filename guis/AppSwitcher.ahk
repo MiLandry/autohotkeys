@@ -23,6 +23,7 @@ Gui, Add, Pic, w30 h30 gCalendar, Guis\calendar.ico
 Gui, Add, Text, y+30, Tools
 
 Gui, Add, Pic, w30 h30 gVSCode, Guis\vscode.ico
+Gui, Add, Pic, w30 h30 gGitHub, icons\github.ico
 Gui, Add, Pic, w30 h30 gRAD, icons\Rad.ico
 Gui, Add, Pic, w30 h30 gDBeaver, icons\Database.ico
 Gui, Add, Pic, w30 h30 gSkype, icons\skype.ico
@@ -53,6 +54,7 @@ Gui, Add, Button,w200 h30 gCalendar, Calendar
 
 ;tools
 Gui, Add, Button, y+50 w200 h30 gVSCode, VS&Code
+Gui, Add, Button, w200 h30 gGitHub, Github
 Gui, Add, Button, w200 h30 gRAD, RAD
 Gui, Add, Button, w200 h30 gDBeaver, &DBeaver
 Gui, Add, Button, w200 h30 gSkype, &Skype
@@ -116,12 +118,12 @@ Zoom:
   return
 
 Trello:
-  ActivateChromeTab("Trello")
+  ActivateChromeTabByTitle("Trello")
   ExitApp
   return
 
 Jira:
-  ; ActivateChromeTab("Jira")
+  ; ActivateChromeTabByTitle("Jira")
   run guis\GUI_Jira.ahk
   ExitApp
   return
@@ -170,6 +172,11 @@ VSCode:
   ExitApp
   return
 
+GitHub:
+  ActivateChromeTabByURL("github")
+  ExitApp
+  return
+
 RAD:
   WinActivate, WebSphere
   ExitApp
@@ -181,7 +188,7 @@ DBeaver:
   return
 
 Snippets:
-  ActivateChromeTab("3cols")
+  ActivateChromeTabByTitle("3cols")
   ExitApp
   return
 
@@ -193,13 +200,13 @@ Snippets:
 ;Projects
 
 VaCovid:
-  ActivateChromeTab("VA COVID Response")
+  ActivateChromeTabByTitle("VA COVID Response")
   ExitApp
   return
 
 
 CMS:
-WinActivate, Mozilla
+  WinActivate, Mozilla
   ; I don' think this will work... if you open the url it creates a popup and focus will be lost.
   ; bringUpApp("vaCMS", "C:\Program Files\Internet Explorer\iexplore.exe")
   ExitApp
@@ -222,10 +229,6 @@ Ionicserve:
   ExitApp
   return
 
-Test:
-  Run Workers\covid-energy\homepage.ahk
-  ExitApp
-  return
 
 MemDetails:
   Run Workers\covid-energy\memberdetail.ahk
@@ -278,4 +281,28 @@ TodayDate:
   return
 
 
+
+
+
+
+
+
+
+
+
+
+
+Test:
+  var := GetUwpAppName()
+  stdout := FileOpen("*", "w")
+  val := "var"
+  MsgBox, % (val .= "`r`" + var)
+  stdout.WriteLine(val)
+  ExitApp
+  return
+
+
 ^x::ExitApp
+
+
+

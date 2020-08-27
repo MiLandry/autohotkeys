@@ -1,4 +1,5 @@
 #include Properties.ahk
+#include AccV2.ahk
 
 
 
@@ -614,9 +615,10 @@ openNewChromeTab(URL)
 
 ; Activates tab in Google Chrome if it exists
 ; Returns true if exists, false if does not exist
+;
 ; Leaves original tab activated if sought tab does not exist
 ; Known issue: will stop searching tabs if two tabs have same name
-ActivateChromeTab(soughtTab)
+ActivateChromeTabByTitle(soughtTab)
 {
   SetTitleMatchMode 2 ; Allows for partial matches in window titles
 
@@ -640,6 +642,54 @@ ActivateChromeTab(soughtTab)
     Send {CtrlDown}{Tab}{CtrlUp}
     Sleep 50 ; Requires some time to update the window titles
     WinGetTitle, currentTab, A
+
+    ; stdout := FileOpen("*", "w")
+    ; val := "currentTab"
+    ; MsgBox, % (val .= "`r`" + currentTab)
+    ; stdout.WriteLine(val)
+
+
+    foundTab := InStr(currentTab, soughtTab) > 0
+  }
+  Until (foundTab || currentTab == firstTab)
+
+  return foundTab
+}
+
+ActivateChromeTabByURL(soughtTab)
+{
+  SetTitleMatchMode 2 ; Allows for partial matches in window titles
+
+  IfWinNotExist Google Chrome
+  {
+    return false
+  }
+
+  WinActivate Google Chrome
+  WinWaitActive Google Chrome
+  WinGetTitle, currentTab, A
+  firstTab := currentTab
+
+  if (InStr(currentTab, soughtTab) > 0)
+  {
+    return true
+  }
+
+  Loop
+  {
+    Send {CtrlDown}{Tab}{CtrlUp}
+    Sleep 50 ; Requires some time to update the window titles
+    ; WinGetTitle, currentTab, A
+    currentTab := Acc_Get("Object","4.1.2.2.2",0,"A").accValue(0)
+
+
+    ; stdout := FileOpen("*", "w")
+    ; val := "currentTab"
+    ; MsgBox, % (val .= "`r`" + currentTab)
+    ; stdout.WriteLine(val)
+
+
+
     foundTab := InStr(currentTab, soughtTab) > 0
   }
   Until (foundTab || currentTab == firstTab)
@@ -674,8 +724,6 @@ SpitDateTime()
     Send, %TimeString%
     return
 }
-
-
 
 
 thesaurus()
@@ -720,13 +768,13 @@ thesaurus()
       StringReplace, searchQuery, searchQuery, `%, `%25, All
       IfInString, searchQuery, .
       {
-         IfInString, searchQuery, +
+        IfInString, searchQuery, +
             Run, chrome.exe http://thesaurus.com/browse/%searchQuery%
-         else
+        else
             Run, chrome.exe %searchQuery%
       }
       else
-         Run, chrome.exe http://thesaurus.com/browse/%searchQuery%
+        Run, chrome.exe http://thesaurus.com/browse/%searchQuery%
    return
 }
 
@@ -735,4 +783,38 @@ logIntoCMS()
 {
     Run Workers\livacms.ahk
     return
+}
+
+GetUwpAppName() {
+    WinGet name,ProcessName,A
+    if(name="ApplicationFrameHost.exe") {
+        ControlGet hWnd,Hwnd,,Windows.UI.Core.CoreWindow1,A
+        if(hWnd)
+            WinGet name,ProcessName,ahk_id %hWnd%
+    }
+    return name
+}
+
+GetURL() {
+	if(WinActive("ahk_exe chrome.exe"))
+		return Acc_Get("Object","4.1.2.2.2",0,"A").accValue(0)
+	if(WinActive("ahk_exe firefox.exe"))
+		return Acc_Get("Object","4.22.8.1",0,"A").accValue(0)
+	if(WinActive("ahk_class IEFrame"))
+		return Acc_Get("Object","4.3.4.1.4.3.4.2.2",0,"A").accValue(0)
+	if(GetUwpAppName()="MicrosoftEdge.exe") {
+		items:=Acc_Children(Acc_Get("Object","4.2.4",0,"A"))
+		Loop % items.length()
+			if(items[A_Index].accRole(0)=ACC_ROLE.TEXT)
+				return items[A_Index].accValue(0)
+	}
+	ClipSaved:=ClipboardAll
+	Clipboard=
+	Sleep 100
+	Send ^l^c ; Ctrl+l would also work in ALL four browsers from above. But nevertheless: this line is untested!
+	ClipWait 0.1
+	url:=Clipboard
+	Clipboard:=ClipSaved
+	ClipSaved=
+	return url
 }
