@@ -1,11 +1,13 @@
-;home page
 
 ;Firstname
-Sleep,1000
 CoordMode, Mouse, Screen
 Click, 950, 500
-Sleep, 200 ;click form auto
-Click, 950, 540
+Sleep, 400
+
+;click autocomplete
+CoordMode, Mouse, Screen
+Click, 950, 545
+Sleep, 400
 
 ;DOB
 Sleep,1000
@@ -24,7 +26,6 @@ Send, {Tab}
 Sleep, 200
 Send, {Enter}
 
-
 ;USCitizen
 Sleep,1000
 CoordMode, Mouse, Screen
@@ -34,9 +35,18 @@ Send, {Tab}
 Sleep, 200
 Send, {Enter}
 
-;Submit
+;Page down
 Sleep,1000
 Send, {PgDn}
+
+;income
+Sleep,1000
+CoordMode, Mouse, Screen
+Click, 820, 590
+Sleep, 200
+
+
+;Submit
 Sleep, 200
 CoordMode, Mouse, Screen
 Click, 950, 905
