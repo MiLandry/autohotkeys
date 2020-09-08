@@ -58,7 +58,6 @@ return
 #F4::F4
 
 
-
 ; F11 for some mysterious reason doesn"t work so fancy stuff here.
 #F11::
 Suspend, On
@@ -81,3 +80,9 @@ return
 ;MsgBox, sntahoei
 run Debugger.ahk
 return
+
+^!#k::
+;MsgBox, sntahoei
+AHKPanic(0,0,0,0)
+return
+
