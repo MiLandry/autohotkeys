@@ -7,83 +7,109 @@ SetTitleMatchMode 2
 
 
 
-; Gui Layout
-;---------------
-;---------------
-
-Gui, +AlwaysOnTop
+; Gui, +AlwaysOnTop
 Gui, Color, Black
 Gui, Font, cWhite
 
 
 
-Gui, Add, Text, x10 y10, Admin
-Gui, Add, Pic, x150 y+30 w30 h30 gZoom, icons\Zoom.ico
-Gui, Add, Button, x+20 w200 h30 gZoom, &Zoom
-Gui, Add, Pic, x150 y+30 w30 h30 gTrello, Guis\trello.ico
-Gui, Add, Button, x+20 w200 h30 gTrello, &Trello
-Gui, Add, Pic, x150 y+30 w30 h30 gJira, Guis\Jira.ico
-Gui, Add, Button, x+20 w200 h30 gJira, &Jira
-Gui, Add, Pic, x150 y+30 w30 h30 gMail, Guis\outlook.ico
-Gui, Add, Button, x+20 w200 h30 h30 gMail, &Mail
-Gui, Add, Pic, x150 y+30 w30 h30 gCalendar, Guis\calendar.ico
-Gui, Add, Button, x+20 w200 h30 h30 gCalendar, Calendar
+Gui, Add, Pic, w30 h30 gZoom, icons\Zoom.ico
+Gui, Add, Pic, w30 h30 gTrello, Guis\trello.ico
+Gui, Add, Pic, w30 h30 gJira, Guis\Jira.ico
+Gui, Add, Pic, w30 h30 gMail, Guis\outlook.ico
+Gui, Add, Pic, w30 h30 gCalendar, Guis\calendar.ico
+
+
+Gui, Add, Text, y+30, Tools
+
+Gui, Add, Pic, w30 h30 gVSCode, Guis\vscode.ico
+Gui, Add, Pic, w30 h30 gGitHub, icons\github.ico
+Gui, Add, Pic, w30 h30 gRAD, icons\Rad.ico
+Gui, Add, Pic, w30 h30 gDBeaver, icons\Database.ico
+Gui, Add, Pic, w30 h30 gSkype, icons\skype.ico
+Gui, Add, Pic, w30 h30 gOneNote, icons\onenote.ico
+Gui, Add, Pic, w30 h30 gPowerShell, Guis\powershell.ico
+Gui, Add, Pic, w30 h30 gSnippets, Guis\snippets.ico
+
+
+Gui, Add, Text, y+30, Apps under development
+
+Gui, Add, Pic, w30 h30 gVaCovid, Guis\fixme.ico
+
+
+Gui, Add, Text, y+30, IDEs
+
+Gui, Add, Pic, w30 h30 gOpenAHKIDE, Guis\vscode.ico
+Gui, Add, Pic, w30 h30 gOpenVACOVIDIDE, Guis\vscode.ico
+
+
+; Column for buttons
+
+
+Gui, Add, Button, ym w200 h30 gZoom, &Zoom ;ym adds column
+Gui, Add, Button, w200 h30 gTrello, &Trello
+Gui, Add, Button,w200 h30 gJira, &Jira
+Gui, Add, Button,w200 h30 gMail, &Mail
+Gui, Add, Button,w200 h30 gCalendar, Calendar
+
+;tools
+Gui, Add, Button, y+50 w200 h30 gVSCode, VS&Code
+Gui, Add, Button, w200 h30 gGitHub, Github
+Gui, Add, Button, w200 h30 gRAD, RAD
+Gui, Add, Button, w200 h30 gDBeaver, &DBeaver
+Gui, Add, Button, w200 h30 gSkype, &Skype
+Gui, Add, Button, w200 h30 gOneNote, &OneNote
+Gui, Add, Button, w200 h30 gPowerShell, &PowerShell
+Gui, Add, Button, w200 h30 gSnippets, &Snippets
+
+;apps under development
+
+Gui, Add, Button, y+50 w200 h30 gVaCovid, VA Covid
+
+
+;IDES
+
+Gui, Add, Button, y+50  w200 h30 gOpenAHKIDE, AHK Code
+Gui, Add, Button, w200 h30 gOpenVACOVIDIDE, COVID Code
 
 
 
 
-Gui, Add, Text, x10 y+30, Tools
+;NEW COLUMN OF WIDGETS
 
-Gui, Add, Pic, x150 y+30 w30 h30 gVSCode, Guis\vscode.ico
-Gui, Add, Button, x+20 w200 h30 h30 gVSCode, VS&Code
-Gui, Add, Pic, x150 y+30 w30 h30 gRAD, icons\Rad.ico
-Gui, Add, Button, x+20 w200 h30 h30 gRAD, RAD
-Gui, Add, Pic, x150 y+30 w30 h30 gDBeaver, icons\Database.ico
-Gui, Add, Button, x+20 w200 h30 h30 gDBeaver, &DBeaver
-Gui, Add, Pic, x150 y+30 w30 h30 gSkype, icons\skype.ico
-Gui, Add, Button, x+20 w200 h30 h30 gSkype, &Skype
-Gui, Add, Pic, x150 y+30 w30 h30 gOneNote, icons\onenote.ico
-Gui, Add, Button, x+20 w200 h30 h30 gOneNote, &OneNote
-Gui, Add, Pic, x150 y+30 w30 h30 gPowerShell, Guis\powershell.ico
-Gui, Add, Button, x+20 w200 h30 h30 gPowerShell, &PowerShell
-Gui, Add, Pic, x150 y+30 w30 h30 gSnippets, Guis\snippets.ico
-Gui, Add, Button, x+20 w200 h30 h30 gSnippets, &Snippets
-
-
-; Gui, Add, Edit, vTable ym  ; The ym option starts a new column of controls.
-; Gui, Add, Edit, vColumn
-
-
-Gui, Add, Text, x10 y+30, Projects
-
-Gui, Add, Pic, x150 y+30 w30 h30 gCMS, icons\Virginia.ico
-Gui, Add, Button, x+20 w200 h30 h30 gCMS, CMS
-
-Gui, Add, Text, x10 y+30, Workflows
-
-Gui, Add, Button, x150 y+30 w200 h30 h30 gTimesheets, Timesheets
-Gui, Add, Button, x150 y+30 w200 h30 h30 gTest, Test
+Gui, Add, Text, ym, Workflows and Automations
+Gui, Add, Button, w200  h30 gTimesheets, Timesheets
+Gui, Add, Button, w200  h30 gIonicserve, ionic serve
+Gui, Add, Button, w200  h30 gCiscoVpn, log into client vpn
+Gui, Add, Button, w200  h30 gTest, Test something
 
 
 
 
 
+Gui, Add, Text , y+30, COVID MOBILE ENERGY
+Gui, Add, Button, w200  h30 gMemDetails, member details
+Gui, Add, Button, w200  h30 gMemDetailsNoIncome, member details no income
+Gui, Add, Button, w200  h30 gIncome, member income
+Gui, Add, Button, w200  h30 gAddress, address
+Gui, Add, Button, w200  h30 gEnergy, energy
+Gui, Add, Button, w200  h30 gAllTheThings, ALL THE THINGS
 
-; Gui, Add, Text, x10 y+30, Test
-; Gui, Add, Button, vBT1 w200 hwndHBT1, Button 1`nLine 2
-; Opt1 := [0, 0x80CF0000, , "White", "H", , "Red", 4]         ; normal flat background & text color
-; Opt2 := [ , "Red"]                                          ; hot flat background color
-; Opt5 := [ , , ,"Gray"]                                      ; defaulted text color -> animation
+; Gui, Add, Text, x10 y+30, Projects
+
+; Gui, Add, Pic, x150 y+30 w30 h30 gCMS, icons\Virginia.ico
+; Gui, Add, Button, x+20 w200 h30 h30 gCMS, CMS
 
 
-Gui, Show,x1200 y50 w1000 h1000, App selector
+;NEW COLUMN OF WIDGETS
 
-; ; style stuff
-; ;---------------
-; ;---------------
-; If !ImageButton.Create(HBT1, Opt1, Opt2, , , Opt5)
-;    MsgBox, 0, ImageButton Error Btn1, % ImageButton.LastError
-;    return
+Gui, Add, Text, ym, Dates and hotstrings and spitters
+Gui, Add, Button, w200  h30 gTodayDate, Today mm/dd/yyyy
+
+
+
+
+Gui, Show,x600 y50 w1000 h1000, App selector
 
 return
 
@@ -103,12 +129,12 @@ Zoom:
   return
 
 Trello:
-  ActivateChromeTab("Trello")
+  ActivateChromeTabByTitle("Trello")
   ExitApp
   return
 
 Jira:
-  ; ActivateChromeTab("Jira")
+  ; ActivateChromeTabByTitle("Jira")
   run guis\GUI_Jira.ahk
   ExitApp
   return
@@ -157,6 +183,11 @@ VSCode:
   ExitApp
   return
 
+GitHub:
+  ActivateChromeTabByURL("github")
+  ExitApp
+  return
+
 RAD:
   WinActivate, WebSphere
   ExitApp
@@ -168,7 +199,7 @@ DBeaver:
   return
 
 Snippets:
-  ActivateChromeTab("3cols")
+  ActivateChromeTabByTitle("3cols")
   ExitApp
   return
 
@@ -179,11 +210,14 @@ Snippets:
 
 ;Projects
 
-
+VaCovid:
+  ActivateChromeTabByTitle("VA COVID Response")
+  ExitApp
+  return
 
 
 CMS:
-WinActivate, Mozilla
+  WinActivate, Mozilla
   ; I don' think this will work... if you open the url it creates a popup and focus will be lost.
   ; bringUpApp("vaCMS", "C:\Program Files\Internet Explorer\iexplore.exe")
   ExitApp
@@ -193,19 +227,121 @@ WinActivate, Mozilla
 ;workflows
 
 Timesheets:
-    run FSM\Timesheet.ahk
-    ExitApp
-    return
-
-Test:
-  ; MsgBox example
-  Run Workers\livacms.ahk
+  run FSM\Timesheet.ahk
   ExitApp
   return
-  ; MsgBox example
+
+Ionicserve:
+  WinActivate, Windows PowerShell
+  Sleep, 1000
+  send ionic serve
+  Sleep, 500
+  send {Enter}
+  ExitApp
+  return
+
+CiscoVpn:
+  Run Workers\vpn\logcisco.ahk
+  ExitApp
+  return
+
+MemDetails:
+  Run Workers\covid-energy\memberdetail.ahk
+  ExitApp
+  return
+MemDetailsNoIncome:
+  Run Workers\covid-energy\memberdetailnoincome.ahk
+  ExitApp
+  return
+Income:
+  Run Workers\covid-energy\income.ahk
+  ExitApp
+  return
+Address:
+  Run Workers\covid-energy\address.ahk
+  ExitApp
+  return
+Energy:
+  Run Workers\covid-energy\energy.ahk
+  ExitApp
+  return
+AllTheThings:
+  Run Workers\covid-energy\all.ahk
+  ExitApp
+  return
 
 
 
+
+
+OpenAHKIDE:
+  WinActivate, Visual Studio Code
+  Sleep, 1000
+  send ^+p
+  Sleep 500
+  send fileopenfold
+  Sleep 200
+  send {Enter}
+  Sleep 200
+  send autohotkeys-master
+  ; Sleep 300
+  ; send {Tab}
+  Sleep 2000
+  send {Enter}
+    Sleep 2000
+  send {Enter}
+  ExitApp
+  return
+
+OpenVACOVIDIDE:
+  WinActivate, Visual Studio Code
+  Sleep, 1000
+  send ^+p
+  Sleep 500
+  send fileopenfold
+  Sleep 200
+  send {Enter}
+  Sleep 200
+  send va-covid19
+  ; Sleep 300
+  ; send {Tab}
+  Sleep 2000
+  send {Enter}
+    Sleep 2000
+  send {Enter}
+  ExitApp
+  return
+
+
+TodayDate:
+  Run Workers\spit-today.ahk
+  ; bringUpApp("Zoom", "C:\Program Files (x86)\Zoom\bin\Zoom.exe")
+  ExitApp
+  return
+
+
+
+
+
+
+
+
+
+
+
+
+
+Test:
+  var := GetUwpAppName()
+  stdout := FileOpen("*", "w")
+  val := "var"
+  MsgBox, % (val .= "`r`" + var)
+  stdout.WriteLine(val)
+  ExitApp
+  return
 
 
 ^x::ExitApp
+
+
+

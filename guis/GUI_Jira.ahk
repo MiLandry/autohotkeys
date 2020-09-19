@@ -40,7 +40,7 @@ GuiClose:
 ;---------------
 
 Open:
-  ActivateChromeTab("Jira")
+  ActivateChromeTabByTitle("Jira")
   ExitApp
   return
 
