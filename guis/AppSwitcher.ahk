@@ -80,7 +80,13 @@ Gui, Add, Button, w200 h30 gOpenVACOVIDIDE, COVID Code
 Gui, Add, Text, ym, Workflows and Automations
 Gui, Add, Button, w200  h30 gTimesheets, Timesheets
 Gui, Add, Button, w200  h30 gIonicserve, ionic serve
+Gui, Add, Button, w200  h30 gCiscoVpn, log into client vpn
 Gui, Add, Button, w200  h30 gTest, Test something
+
+
+
+
+
 Gui, Add, Text , y+30, COVID MOBILE ENERGY
 Gui, Add, Button, w200  h30 gMemDetails, member details
 Gui, Add, Button, w200  h30 gMemDetailsNoIncome, member details no income
@@ -234,6 +240,10 @@ Ionicserve:
   ExitApp
   return
 
+CiscoVpn:
+  Run Workers\vpn\logcisco.ahk
+  ExitApp
+  return
 
 MemDetails:
   Run Workers\covid-energy\memberdetail.ahk

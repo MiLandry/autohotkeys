@@ -179,7 +179,7 @@ return
 
 ;------------------Helpers
 
-; the default 'switch to this app, or open it if its not. For the second arg, find the 'shortcut' properties, and use its target as the arg with qquotes'
+; the default 'switch to this app, or open it if its not. First arg is app name For the second arg, find the 'shortcut' properties, and use its target as the arg with qquotes'
 bringUpApp( appName, appLocation)
 {
     ;msgbox %appName%
