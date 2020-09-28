@@ -177,6 +177,38 @@ send docker kill
 return
 }
 
+
+fillTextField(data)
+{
+  Send, %data%
+Sleep, 500
+Send, {Tab}
+Sleep, 500
+
+}
+
+pickDropDown()
+{
+  Send, {Enter}
+  Sleep, 500
+  Send, {Down}
+  Sleep, 500
+  Send, {Enter}
+  Sleep, 500
+  Send, {Tab}
+  Sleep, 500
+}
+
+
+
+
+
+
+
+
+
+
+
 ;------------------Helpers
 
 ; the default 'switch to this app, or open it if its not. First arg is app name For the second arg, find the 'shortcut' properties, and use its target as the arg with qquotes'

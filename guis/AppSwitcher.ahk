@@ -95,6 +95,9 @@ Gui, Add, Button, w200  h30 gAddress, address
 Gui, Add, Button, w200  h30 gEnergy, energy
 Gui, Add, Button, w200  h30 gAllTheThings, ALL THE THINGS
 
+Gui, Add, Text , y+30, IN-HOME
+Gui, Add, Button, w200  h30 gVendorId, VendorId
+
 ; Gui, Add, Text, x10 y+30, Projects
 
 ; Gui, Add, Pic, x150 y+30 w30 h30 gCMS, icons\Virginia.ico
@@ -269,6 +272,14 @@ AllTheThings:
   Run Workers\covid-energy\all.ahk
   ExitApp
   return
+
+VendorId:
+  Run Workers\in-home\vendor-id.ahk
+  ExitApp
+  return
+
+
+
 
 
 
