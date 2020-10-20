@@ -11,9 +11,9 @@ Sleep, 500
 ; Send, {Tab}
 ; Sleep, 500
 
-CoordMode, Mouse, Screen
-Click, 575, 335
-Sleep, 200
+; CoordMode, Mouse, Screen
+; Click, 500, 300
+; Sleep, 200
 
 ; providerName
 fillTextField("mikecare")
@@ -30,27 +30,29 @@ Sleep, 500
 fillTextField("111222333")
 
 ; directorname
-fillTextField("111222333")
+fillTextField("ieoa")
 ; dphone
-fillTextField("111222333")
+fillTextField("12345678900000")
 ; dext
 fillTextField("111222333")
 ; dcell
-fillTextField("111222333")
+fillTextField("12345678900000000")
 ; cirectorname
-fillTextField("111222333")
+fillTextField("ieoa")
 ; cphone
-fillTextField("111222333")
+fillTextField("123456789000000")
 ; cext
 fillTextField("111222333")
 ; ccell
-fillTextField("111222333")
+fillTextField("12345678900000")
 ; cemail
 fillTextField("fakeemail@deloitte.com")
+; confirmemail
+fillTextField("fakeemail@deloitte.com")
 ; mstreet
-fillTextField("111222333")
+fillTextField("ieoa")
 ; mcity
-fillTextField("111222333")
+fillTextField("ieoa")
 ; mstate
 pickDropDown()
 ; mzip

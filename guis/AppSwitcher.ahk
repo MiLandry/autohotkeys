@@ -98,6 +98,9 @@ Gui, Add, Button, w200  h30 gAllTheThings, ALL THE THINGS
 Gui, Add, Text , y+30, IN-HOME
 Gui, Add, Button, w200  h30 gVendorId, VendorId
 
+Gui, Add, Text , y+30, GRANTS
+Gui, Add, Button, w200  h30 gGrantsVendorId, GrantsVendorId
+
 ; Gui, Add, Text, x10 y+30, Projects
 
 ; Gui, Add, Pic, x150 y+30 w30 h30 gCMS, icons\Virginia.ico
@@ -278,7 +281,10 @@ VendorId:
   ExitApp
   return
 
-
+GrantsVendorId:
+  Run Workers\grants\vendor-id.ahk
+  ExitApp
+  return
 
 
 
