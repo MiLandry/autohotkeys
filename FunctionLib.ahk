@@ -301,54 +301,8 @@ return
 }
 
 
-openGmail()
-{
-SetTitleMatchMode 2
-IfWinExist - Gmail
-{
-    WinActivate
-    WinMaximize
-}
-else
-{
-    run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe --app=https://mail.google.com/mail;Application Launcher 2.0
-    WinWait - Gmail
-    WinActivate
-    WinMaximize
-}
-return
-}
 
 
-openEmail()
-{
-if (isWorkComputer())
-{
-openWorkEmail()
-}
-else
-{
-;msgbox is home email
-openGmail()
-}
-return
-}
-
-
-openAlternativeEmail()
-{
-;MsgBoX open alt email
-if (isWorkComputer())
-{
-openGmail()
-
-}
-else
-{
-openWorkEmail()
-}
-return
-}
 
 openOneNote()
 {

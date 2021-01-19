@@ -15,7 +15,7 @@ Gui, Font, cWhite
 
 Gui, Add, Pic, w30 h30 gZoom, icons\Zoom.ico
 Gui, Add, Pic, w30 h30 gTrello, Guis\trello.ico
-Gui, Add, Pic, w30 h30 gJira, Guis\Jira.ico
+; Gui, Add, Pic, w30 h30 gJira, Guis\Jira.ico
 Gui, Add, Pic, w30 h30 gMail, Guis\outlook.ico
 Gui, Add, Pic, w30 h30 gCalendar, Guis\calendar.ico
 
@@ -48,7 +48,7 @@ Gui, Add, Pic, w30 h30 gOpenVACOVIDIDE, Guis\vscode.ico
 
 Gui, Add, Button, ym w200 h30 gZoom, &Zoom ;ym adds column
 Gui, Add, Button, w200 h30 gTrello, &Trello
-Gui, Add, Button,w200 h30 gJira, &Jira
+; Gui, Add, Button,w200 h30 gJira, &Jira
 Gui, Add, Button,w200 h30 gMail, &Mail
 Gui, Add, Button,w200 h30 gCalendar, Calendar
 
@@ -130,7 +130,7 @@ GuiClose:
 
 
 Zoom:
-  bringUpApp("Zoom", "C:\Program Files (x86)\Zoom\bin\Zoom.exe")
+  bringUpApp("Zoom", getZoomPath())
   ExitApp
   return
 
@@ -146,13 +146,13 @@ Jira:
   return
 
 Mail:
-  openWorkEmail()
+  openEmail()
   Send ^1
   ExitApp
   return
 
 Calendar:
-  openWorkEmail()
+  openCalendar()
   Send ^2
   ExitApp
   return

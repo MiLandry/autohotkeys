@@ -10,7 +10,7 @@ Gestures:
 ;Gesture_WheelDown = ^{Tab}
 
 
-return ; have to return the script to this point as these stubs 
+return ; have to return the script to this point as these stubs
 ;have to be run on script startup. Has something to do with equals sign vs colon
 
 
@@ -21,7 +21,7 @@ return ; have to return the script to this point as these stubs
 ;open C drive
 Gesture_U:
 {
-send #e	
+send #e
 return
 }
 
@@ -58,12 +58,7 @@ openEmail()
 return
 }
 
-; Make 'M' with right tail for alt email
-Gesture_U_R_D_U_R_D_R:
-{
-openAlternativeEmail()
-return
-}
+
 
 
 ;------------------------ The "DOWN" library--------------
@@ -152,7 +147,7 @@ return
 
 ; max
 Gesture_R_U:
-{   
+{
     send #{Up}
     return
 }
@@ -237,7 +232,7 @@ Gesture_D_R_U:
 
 /*
  * Init for Additional Scripts
-Additional 
+Additional
  */
 
 SetWinDelay, 2  ; For EasyWindowDrag.ahk
@@ -280,7 +275,7 @@ Gesture_L_D_R_U_L:
 
 
 *XButton1::
-    if m_WaitForRelease ; Holding gesture button. 
+    if m_WaitForRelease ; Holding gesture button.
     {
         m_ScrolledWheel := true
         m_ExitLoop := true
@@ -332,8 +327,8 @@ XButton2&LButton:
     else
         G_MinimizeActiveWindow()
 return
-									
-XButton2&RButton:		
+
+XButton2&RButton:
 {
 Send ^{F4}
 return
@@ -357,13 +352,13 @@ XButton2::  ;Mousebutton 4
     }
     Hotkey, WheelUp,   XButton2&WheelUp,   On
     Hotkey, WheelDown, XButton2&WheelDown, On
-    Hotkey, LButton,   XButton2&LButton,   On	
+    Hotkey, LButton,   XButton2&LButton,   On
     Hotkey, RButton,   XButton2&RButton,   On
-    
+
     XButton2_tick := A_TickCount
 
     KeyWait, XButton2
-    
+
     if (A_ThisHotkey = "XButton2") {
         short_press := (A_TickCount - XButton2_tick) < 200
         if short_press
@@ -371,12 +366,12 @@ XButton2::  ;Mousebutton 4
         else
             Send ^+{Tab}
     } ; else: some other hotkey has fired
-        
+
     Hotkey, WheelUp,   Off
     Hotkey, WheelDown, Off
     Hotkey, LButton,   Off
     Hotkey, RButton,   Off
-    
+
     ; Reapply gesture keys in case they overlap with the above.
     Hotkey, %m_GestureKey%, GestureKey_Down, On
     if m_GestureKey2

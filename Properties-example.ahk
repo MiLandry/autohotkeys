@@ -5,6 +5,9 @@
 
 ;computer names
 
+;instead of doing computer name checks, just create custom implementations of
+; methods in the properties file
+
 getGamingComputerName()
 {
 ;msgbox 'getGamingComputerName method'
@@ -67,3 +70,7 @@ getWorkPasswordVictor()
 return "wpwdvictor"
 }
 
+getZoomPath()
+{
+  return "fake path"
+}
