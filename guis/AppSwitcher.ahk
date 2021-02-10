@@ -135,7 +135,8 @@ Zoom:
   return
 
 Trello:
-  ActivateChromeTabByTitle("Trello")
+  ;ActivateChromeTabByTitle("Trello")
+  bringUpApp("Trello","C:\Program Files\WindowsApps\45273LiamForsyth.PawsforTrello_2.11.10.0_x64__7pb5ddty8z1pa\app\Trello.exe")
   ExitApp
   return
 
