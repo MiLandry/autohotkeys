@@ -288,35 +288,35 @@ return
 }
 
 
-openEmail()
-{
-if (isWorkComputer())
-{
-openWorkEmail()
-}
-else
-{
-;msgbox is home email
-openGmail()
-}
-return
-}
+; openEmail()
+; {
+; if (isWorkComputer())
+; {
+; openWorkEmail()
+; }
+; else
+; {
+; ;msgbox is home email
+; openGmail()
+; }
+; return
+; }
 
 
-openAlternativeEmail()
-{
-;MsgBoX open alt email
-if (isWorkComputer())
-{
-openGmail()
+; openAlternativeEmail()
+; {
+; ;MsgBoX open alt email
+; if (isWorkComputer())
+; {
+; openGmail()
 
-}
-else
-{
-openWorkEmail()
-}
-return
-}
+; }
+; else
+; {
+; openWorkEmail()
+; }
+; return
+; }
 
 openOneNote()
 {
