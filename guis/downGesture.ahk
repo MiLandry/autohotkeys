@@ -34,10 +34,9 @@ GuiClose:
   ExitApp
   return
 
-catReact:
-  Run, "Z:\Microsoft VS Code\bin\code" "Z:\source\react-projects\cat-wrangler-react"
-  ExitApp
-  return
+#include Guis\tool-selector-columns\firstColumn.handlers.ahk
+#include Guis\tool-selector-columns\secondColumn.handlers.ahk
+#include Guis\tool-selector-columns\thirdColumn.handlers.ahk
 
 Zoom:
   bringUpApp("Zoom", "C:\Program Files (x86)\Zoom\bin\Zoom.exe")

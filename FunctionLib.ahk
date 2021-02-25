@@ -785,6 +785,12 @@ logIntoCMS()
     return
 }
 
+openVSCode(path) {
+  ; vscode run command is smart enough to open existing window by itself
+      Run, "Z:\Microsoft VS Code\bin\code" "%path%"
+    return
+}
+
 GetUwpAppName() {
     WinGet name,ProcessName,A
     if(name="ApplicationFrameHost.exe") {
@@ -846,3 +852,5 @@ If SelfToo
     ExitApp
   }
 }
+
+
