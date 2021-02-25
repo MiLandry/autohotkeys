@@ -667,8 +667,8 @@ ActivateChromeTabByURL(soughtTab)
 
   WinActivate Google Chrome
   WinWaitActive Google Chrome
-  WinGetTitle, currentTab, A
-  firstTab := currentTab
+  WinGetTitle, firstTab, A
+  ;firstTab := currentTab
 
   if (InStr(currentTab, soughtTab) > 0)
   {
@@ -678,9 +678,9 @@ ActivateChromeTabByURL(soughtTab)
   Loop
   {
     Send {CtrlDown}{Tab}{CtrlUp}
-    Sleep 50 ; Requires some time to update the window titles
-    ; WinGetTitle, currentTab, A
-    currentTab := Acc_Get("Object","4.1.2.2.2",0,"A").accValue(0)
+    Sleep 100 ; Requires some time to update the window titles
+     WinGetTitle, currentTab, A
+    ;currentTab := Acc_Get("Object","4.1.2.2.2",0,"A").accValue(0)
 
 
     ; stdout := FileOpen("*", "w")
