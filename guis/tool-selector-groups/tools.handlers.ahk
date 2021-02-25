@@ -1,9 +1,53 @@
 
+Zoom:
+  bringUpApp("Zoom", "C:\Program Files (x86)\Zoom\bin\Zoom.exe")
+  ExitApp
+  return
 
-Gui, Add, Text, y+30, Tools
+Trello:
+  ActivateChromeTabByTitle("Trello")
+  ExitApp
+  return
 
-Gui, Add, Button, y+30 w200 h30 gZoom, &Zoom
-Gui, Add, Button, w200 h30 gTrello, &Trello
-Gui, Add, Button,w200 h30 gJira, &Jira
-Gui, Add, Button,w200 h30 gMail, &Mail
-Gui, Add, Button,w200 h30 gCalendar, Calendar
+Trello-d:
+  bringUpApp("Trello", "C:\Users\Mike\Desktop\Trello")
+  ExitApp
+  return
+
+
+Jira:
+  ; ActivateChromeTabByTitle("Jira")
+  run guis\GUI_Jira.ahk
+  ExitApp
+  return
+
+Mail:
+  openWorkEmail()
+  Send ^1
+  ExitApp
+  return
+
+Calendar:
+  openWorkEmail()
+  Send ^2
+  ExitApp
+  return
+
+Skype:
+  WinActivate, Skype
+  ExitApp
+  return
+
+OneNote:
+openOneNote()
+  ExitApp
+  return
+
+PowerShell:
+  ;bringUpApp("powershell", "C:\Users\miclandry\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell")
+  openPowerShell()
+  ExitApp
+  return
+
+
+
