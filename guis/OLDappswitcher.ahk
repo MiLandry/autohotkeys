@@ -13,56 +13,39 @@ Gui, Font, cWhite
 
 
 
-Gui, Add, Pic, w30 h30 gZoom, icons\Zoom.ico
-Gui, Add, Pic, w30 h30 gTrello, Guis\trello.ico
-; Gui, Add, Pic, w30 h30 gJira, Guis\Jira.ico
-Gui, Add, Pic, w30 h30 gMail, Guis\outlook.ico
-Gui, Add, Pic, w30 h30 gCalendar, Guis\calendar.ico
 
 
+; first column
 Gui, Add, Text, y+30, Tools
 
-Gui, Add, Pic, w30 h30 gVSCode, Guis\vscode.ico
-Gui, Add, Pic, w30 h30 gGitHub, icons\github.ico
-Gui, Add, Pic, w30 h30 gRAD, icons\Rad.ico
-Gui, Add, Pic, w30 h30 gDBeaver, icons\Database.ico
-Gui, Add, Pic, w30 h30 gSkype, icons\skype.ico
-Gui, Add, Pic, w30 h30 gOneNote, icons\onenote.ico
-Gui, Add, Pic, w30 h30 gPowerShell, Guis\powershell.ico
-Gui, Add, Pic, w30 h30 gSnippets, Guis\snippets.ico
-
-
-Gui, Add, Text, y+30, Apps under development
-
-Gui, Add, Pic, w30 h30 gVaCovid, Guis\fixme.ico
-
-
-Gui, Add, Text, y+30, IDEs
-
-Gui, Add, Pic, w30 h30 gOpenAHKIDE, Guis\vscode.ico
-Gui, Add, Pic, w30 h30 gOpenVACOVIDIDE, Guis\vscode.ico
-
-
-; Column for buttons
-
-
-Gui, Add, Button, ym w200 h30 gZoom, &Zoom ;ym adds column
+Gui, Add, Button, y+30 w200 h30 gZoom, &Zoom
 Gui, Add, Button, w200 h30 gTrello, &Trello
-; Gui, Add, Button,w200 h30 gJira, &Jira
+Gui, Add, Button,w200 h30 gJira, &Jira
 Gui, Add, Button,w200 h30 gMail, &Mail
 Gui, Add, Button,w200 h30 gCalendar, Calendar
 
-;tools
-Gui, Add, Button, y+50 w200 h30 gVSCode, VS&Code
+Gui, Add, Text, y+30, Software tools
+
+Gui, Add, Button, y+30 w200 h30 gVSCode, VS&Code
 Gui, Add, Button, w200 h30 gGitHub, Github
-Gui, Add, Button, w200 h30 gRAD, RAD
-Gui, Add, Button, w200 h30 gDBeaver, &DBeaver
-Gui, Add, Button, w200 h30 gSkype, &Skype
 Gui, Add, Button, w200 h30 gOneNote, &OneNote
 Gui, Add, Button, w200 h30 gPowerShell, &PowerShell
 Gui, Add, Button, w200 h30 gSnippets, &Snippets
 
-;apps under development
+
+
+Gui, Add, Text, y+30, Apps under development
+
+Gui, Add, Button, y+30 w200 h30 gCatWrangler, CatWrangler
+Gui, Add, Button, w200 h30 gCatWranglerApi, CatWranglerApi
+
+Gui, Add, Text, y+30, IDEs
+
+
+#include Guis\foo.ahk
+
+
+
 
 Gui, Add, Button, y+50 w200 h30 gVaCovid, VA Covid
 
@@ -117,6 +100,9 @@ Gui, Add, Button, w200  h30 gTodayDate, Today mm/dd/yyyy
 
 Gui, Show,x600 y50 w1000 h1000, App selector
 
+
+
+
 return
 
 
@@ -124,9 +110,6 @@ GuiClose:
   ExitApp
   return
 
-; Labels
-;---------------
-;---------------
 
 
 Zoom:
@@ -191,6 +174,16 @@ VSCode:
   return
 
 GitHub:
+  ActivateChromeTabByURL("github")
+  ExitApp
+  return
+
+CatWrangler:
+  ActivateChromeTabByURL("Auth0 React Sample")
+  ExitApp
+  return
+
+CatWranglerApi:
   ActivateChromeTabByURL("github")
   ExitApp
   return
@@ -360,6 +353,5 @@ Test:
 
 
 ^x::ExitApp
-
 
 

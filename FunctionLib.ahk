@@ -301,8 +301,54 @@ return
 }
 
 
+openGmail()
+{
+SetTitleMatchMode 2
+IfWinExist - Gmail
+{
+    WinActivate
+    WinMaximize
+}
+else
+{
+    run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe --app=https://mail.google.com/mail;Application Launcher 2.0
+    WinWait - Gmail
+    WinActivate
+    WinMaximize
+}
+return
+}
 
 
+; openEmail()
+; {
+; if (isWorkComputer())
+; {
+; openWorkEmail()
+; }
+; else
+; {
+; ;msgbox is home email
+; openGmail()
+; }
+; return
+; }
+
+
+; openAlternativeEmail()
+; {
+; ;MsgBoX open alt email
+; if (isWorkComputer())
+; {
+; openGmail()
+
+; }
+; else
+; {
+; openWorkEmail()
+; }
+; return
+; }
 
 openOneNote()
 {
@@ -604,6 +650,8 @@ openNewChromeTab(URL)
 ;
 ; Leaves original tab activated if sought tab does not exist
 ; Known issue: will stop searching tabs if two tabs have same name
+
+; @args soughtTab , this is the title of the site, NOT THE URL
 ActivateChromeTabByTitle(soughtTab)
 {
   SetTitleMatchMode 2 ; Allows for partial matches in window titles
@@ -642,6 +690,8 @@ ActivateChromeTabByTitle(soughtTab)
   return foundTab
 }
 
+
+; WHAT IS THIS THING? HOW CAN IT MATCH?
 ActivateChromeTabByURL(soughtTab)
 {
   SetTitleMatchMode 2 ; Allows for partial matches in window titles
@@ -653,8 +703,8 @@ ActivateChromeTabByURL(soughtTab)
 
   WinActivate Google Chrome
   WinWaitActive Google Chrome
-  WinGetTitle, currentTab, A
-  firstTab := currentTab
+  WinGetTitle, firstTab, A
+  ;firstTab := currentTab
 
   if (InStr(currentTab, soughtTab) > 0)
   {
@@ -664,9 +714,9 @@ ActivateChromeTabByURL(soughtTab)
   Loop
   {
     Send {CtrlDown}{Tab}{CtrlUp}
-    Sleep 50 ; Requires some time to update the window titles
-    ; WinGetTitle, currentTab, A
-    currentTab := Acc_Get("Object","4.1.2.2.2",0,"A").accValue(0)
+    Sleep 100 ; Requires some time to update the window titles
+     WinGetTitle, currentTab, A
+    ;currentTab := Acc_Get("Object","4.1.2.2.2",0,"A").accValue(0)
 
 
     ; stdout := FileOpen("*", "w")
@@ -771,6 +821,12 @@ logIntoCMS()
     return
 }
 
+openVSCode(path) {
+  ; vscode run command is smart enough to open existing window by itself
+      Run, "Z:\Microsoft VS Code\bin\code" "%path%"
+    return
+}
+
 GetUwpAppName() {
     WinGet name,ProcessName,A
     if(name="ApplicationFrameHost.exe") {
@@ -779,6 +835,19 @@ GetUwpAppName() {
             WinGet name,ProcessName,ahk_id %hWnd%
     }
     return name
+}
+
+OpenTrelloBoard(board) {
+    bringUpApp("Trello", "C:\Users\Mike\Desktop\Trello")
+  Sleep, 500
+  Send, b
+  Sleep, 500
+  Send, %board%
+  Sleep, 500
+  Send, {Enter}
+  ExitApp
+  return
+
 }
 
 GetURL() {
@@ -832,3 +901,5 @@ If SelfToo
     ExitApp
   }
 }
+
+
