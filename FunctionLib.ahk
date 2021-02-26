@@ -692,7 +692,7 @@ ActivateChromeTabByTitle(soughtTab)
 
 
 ; WHAT IS THIS THING? HOW CAN IT MATCH?
-ActivateChromeTabByURL(soughtTab)
+ActivateChromeTabByURL(soughtTab, urlToOpen)
 {
   SetTitleMatchMode 2 ; Allows for partial matches in window titles
 
@@ -716,19 +716,17 @@ ActivateChromeTabByURL(soughtTab)
     Send {CtrlDown}{Tab}{CtrlUp}
     Sleep 100 ; Requires some time to update the window titles
      WinGetTitle, currentTab, A
-    ;currentTab := Acc_Get("Object","4.1.2.2.2",0,"A").accValue(0)
-
-
-    ; stdout := FileOpen("*", "w")
-    ; val := "currentTab"
-    ; MsgBox, % (val .= "`r`" + currentTab)
-    ; stdout.WriteLine(val)
 
 
 
     foundTab := InStr(currentTab, soughtTab) > 0
   }
   Until (foundTab || currentTab == firstTab)
+
+  if (currentTab == firstTab)
+  {
+    Run, chrome.exe %urlToOpen%
+  }
 
   return foundTab
 }

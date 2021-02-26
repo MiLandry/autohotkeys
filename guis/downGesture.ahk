@@ -53,17 +53,17 @@ VSCode:
   return
 
 GitHub:
-  ActivateChromeTabByURL("github")
+  ActivateChromeTabByURL("github", "https://github.com/")
   ExitApp
   return
 
 CatWrangler:
-  ActivateChromeTabByURL("Auth0 React Sample")
+  ActivateChromeTabByURL("Auth0 React Sample", "localhost:4040")
   ExitApp
   return
 
 CatWranglerApi:
-  ActivateChromeTabByURL("github")
+  ActivateChromeTabByURL("github", "https://github.com/")
   ExitApp
   return
 
