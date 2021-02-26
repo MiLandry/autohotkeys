@@ -28,7 +28,7 @@ Mail:
   return
 
 Calendar:
-  openWorkEmail()
+  openCalendar()
   Send ^2
   ExitApp
   return
