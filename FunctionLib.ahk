@@ -618,6 +618,8 @@ openNewChromeTab(URL)
 ;
 ; Leaves original tab activated if sought tab does not exist
 ; Known issue: will stop searching tabs if two tabs have same name
+
+; @args soughtTab , this is the title of the site, NOT THE URL
 ActivateChromeTabByTitle(soughtTab)
 {
   SetTitleMatchMode 2 ; Allows for partial matches in window titles
@@ -656,6 +658,8 @@ ActivateChromeTabByTitle(soughtTab)
   return foundTab
 }
 
+
+; WHAT IS THIS THING? HOW CAN IT MATCH?
 ActivateChromeTabByURL(soughtTab)
 {
   SetTitleMatchMode 2 ; Allows for partial matches in window titles
@@ -799,6 +803,19 @@ GetUwpAppName() {
             WinGet name,ProcessName,ahk_id %hWnd%
     }
     return name
+}
+
+OpenTrelloBoard(board) {
+    bringUpApp("Trello", "C:\Users\Mike\Desktop\Trello")
+  Sleep, 500
+  Send, b
+  Sleep, 500
+  Send, %board%
+  Sleep, 500
+  Send, {Enter}
+  ExitApp
+  return
+
 }
 
 GetURL() {

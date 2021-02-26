@@ -8,6 +8,11 @@ catapi-ide:
   ExitApp
   return
 
+catapi-swaggerhub:
+  ActivateChromeTabByTitle("| SwaggerHub")
+  ExitApp
+  return
+
 ahk-ide:
   openVSCode("C:\Users\Mike\source\autohotkeys")
   ExitApp

@@ -16,6 +16,7 @@ Gui, Font, cWhite
 
 
 #include Guis\tool-selector-columns\firstColumn.ahk
+Gui, Add, Text, x+80 ym,
 #include Guis\tool-selector-columns\secondColumn.ahk
 #include Guis\tool-selector-columns\thirdColumn.ahk
 
