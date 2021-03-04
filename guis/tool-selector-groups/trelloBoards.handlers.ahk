@@ -12,4 +12,7 @@ Trello-fusionConsulting:
   ExitApp
   return
 
-
+Trello-personal:
+  OpenTrelloBoard("pers")
+  ExitApp
+  return
