@@ -17,3 +17,11 @@ ahk-ide:
   openVSCode("C:\Users\Mike\source\autohotkeys")
   ExitApp
   return
+
+landry-spec:
+  openVSCode("Z:\source\landry-enterprise-ready-platform-specification")
+  ExitApp
+  return
+
+
+
