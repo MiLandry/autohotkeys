@@ -21,8 +21,9 @@ Jira:
   ExitApp
   return
 
+
 Mail:
-  openWorkEmail()
+  openEmail()
   Send ^1
   ExitApp
   return

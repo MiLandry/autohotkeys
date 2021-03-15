@@ -902,3 +902,92 @@ If SelfToo
 }
 
 
+
+
+
+; DBeaver:
+;   bringUpApp("DBeaver", "C:\Users\miclandry\AppData\Local\DBeaver\dbeaver.exe -nl en")
+;   ExitApp
+;   return
+
+
+
+
+
+
+
+
+;workflows
+
+; Timesheets:
+;   run FSM\Timesheet.ahk
+;   ExitApp
+;   return
+
+; Ionicserve:
+;   WinActivate, Windows PowerShell
+;   Sleep, 1000
+;   send ionic serve
+;   Sleep, 500
+;   send {Enter}
+;   ExitApp
+;   return
+
+
+; MemDetails:
+;   Run Workers\covid-energy\memberdetail.ahk
+;   ExitApp
+;   return
+; MemDetailsNoIncome:
+;   Run Workers\covid-energy\memberdetailnoincome.ahk
+;   ExitApp
+;   return
+; Income:
+;   Run Workers\covid-energy\income.ahk
+;   ExitApp
+;   return
+; Address:
+;   Run Workers\covid-energy\address.ahk
+;   ExitApp
+;   return
+; Energy:
+;   Run Workers\covid-energy\energy.ahk
+;   ExitApp
+;   return
+; AllTheThings:
+;   Run Workers\covid-energy\all.ahk
+;   ExitApp
+;   return
+
+
+
+
+
+
+; TodayDate:
+;   Run Workers\spit-today.ahk
+;   ; bringUpApp("Zoom", "C:\Program Files (x86)\Zoom\bin\Zoom.exe")
+;   ExitApp
+;   return
+
+
+
+
+
+
+
+
+
+
+
+
+
+; Test:
+;   var := GetUwpAppName()
+;   stdout := FileOpen("*", "w")
+;   val := "var"
+;   MsgBox, % (val .= "`r`" + var)
+;   stdout.WriteLine(val)
+;   ExitApp
+;   return
+
