@@ -68,7 +68,7 @@ return
 ;open interface menu
 Gesture_D:
 {
-    run guis\downGesture.ahk
+    run guis\GUI_ActivitySwitcher.ahk
     return
 }
 

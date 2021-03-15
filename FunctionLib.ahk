@@ -836,12 +836,13 @@ GetUwpAppName() {
 }
 
 OpenTrelloBoard(board) {
-    bringUpApp("Trello", "C:\Users\Mike\Desktop\Trello")
-  Sleep, 500
+  Sleep, 1000
+    bringUpApp("| Trello", "C:\Users\Mike\Desktop\Trello")
+  Sleep, 1500
   Send, b
-  Sleep, 500
+  Sleep, 1500
   Send, %board%
-  Sleep, 500
+  Sleep, 1500
   Send, {Enter}
   ExitApp
   return
